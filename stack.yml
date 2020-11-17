@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  reverse-proxy:
+    external: true
+    name: reverse-proxy
+
+services:
+  app:
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.chatbot-www-prd.rule=Host(`chatbot.eoatech.com`)"
+        - "traefik.http.routers.chatbot-www-prd.tls.certresolver=le"
+        - "traefik.http.services.chatbot-www-prd.loadbalancer.server.port=8080"
+    image: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
+    networks:
+      - reverse-proxy
