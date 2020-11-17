@@ -13,7 +13,7 @@ build-docker-prd:
   stage: build
   only:
     - master
-  scripts:
+  script:
     - echo "REACT_APP_BASE_URL=${API_URL_PRD}" > .env
     - docker build -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} .
     - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
@@ -22,7 +22,7 @@ deploy-docker-prd:
   stage: deploy
   only:
     - master
-  scripts:
+  script:
     - eval $(ssh-agent -s)
     - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add -
     - mkdir ~/.ssh && chmod 700 ~/.ssh
