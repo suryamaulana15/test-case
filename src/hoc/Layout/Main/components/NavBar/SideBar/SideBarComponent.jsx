@@ -13,7 +13,7 @@ import AcountName from '../AppBar/ToolBar/AcountName'
 import { Link } from 'react-router-dom'
 
 const drawerWidth = 240
-const drawerColorBlue = '#011747'
+// const drawerColorBlue = '#011747'
 
 const textMenuWhite = '#FFFFFF'
 
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: drawerColorBlue
+    backgroundColor: theme.palette.main.dark,
   },
   // drawer: {
   //   width: drawerWidth,
@@ -89,7 +89,7 @@ const useStyles = makeStyles(theme => ({
   },
   textMenu: {
     color: textMenuWhite,
-    fontFamily: 'Roboto'
+    fontFamily: "'Nunito', sans-serif"
   }
 }))
 

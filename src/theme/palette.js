@@ -42,6 +42,10 @@ export default {
     main: colors.red[600],
     light: colors.red[400]
   },
+  main: {
+    primary: '#1C81F7',
+    dark: '#0277BD'
+  },
   text: {
     primary: colors.blueGrey[900],
     secondary: colors.blueGrey[600],

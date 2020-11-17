@@ -89,7 +89,7 @@ const useStyles = makeStyles(theme => ({
   },
   textMenu: {
     color: textMenuWhite,
-    fontFamily: 'Roboto'
+    fontFamily: "'Nunito', sans-serif"
   }
 }))
 

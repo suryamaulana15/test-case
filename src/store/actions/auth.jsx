@@ -32,7 +32,7 @@ export const auth = (email, password, history) => {
       password: password
     }
 
-    axios.post('admin/login?lang=id', authData, {
+    axios.post('v1/admin/auth/login', authData, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -40,11 +40,11 @@ export const auth = (email, password, history) => {
       }
     })
       .then(response => {
-        sessionStorage.setItem('access_token', response.data.Token)
-        sessionStorage.setItem('role', response.data.Admin.id_role)
-        sessionStorage.setItem('data', JSON.stringify(response.data.Admin))
+        sessionStorage.setItem('access_token', response.data.token)
+        sessionStorage.setItem('role', response.data.user.roleId)
+        sessionStorage.setItem('data', JSON.stringify(response.data.user))
         history.push(`/dashboard`);
-        dispatch(authSuccess(response.data.access_token, response.data.role, response.data.admin))
+        dispatch(authSuccess(response.data.token, response.data.user.roleId, response.data.user))
       })
       .catch(err => {
         // dispatch(authFail(err.response.data.msg_str))

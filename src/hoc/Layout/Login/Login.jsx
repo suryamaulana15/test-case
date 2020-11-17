@@ -119,7 +119,7 @@ const Login =  props => {
 								Selamat Datang Kembali
 							</div>
 							<div>
-								Masuk ke D'Syirkah Management System
+								Masuk ke Chat Bot Admin
 							</div>
 							<div>
 								<form className={classes.form} onSubmit={handleSubmit(onSubmit)}>

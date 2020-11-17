@@ -32,7 +32,7 @@ const Profile = props => {
   const { className, ...rest } = props
 
   const classes = useStyles()
-  const userData = JSON.parse(localStorage.getItem('userData'))
+  const userData = JSON.parse(sessionStorage.getItem('data'))
   
   return (
     <div
@@ -44,7 +44,7 @@ const Profile = props => {
           alt="Person"
           className={classes.avatar}
           component={RouterLink}
-          src={userData.image}
+          src=""
           to="/profile"
         />
       </NavLink>
@@ -54,7 +54,7 @@ const Profile = props => {
       >
         {userData.name}
       </Typography>
-      <Typography variant="body2" style={{ color: nameColorWhite }}>{userData.role_name}</Typography>
+      <Typography variant="body2" style={{ color: nameColorWhite }}>{userData.roleId}</Typography>
     </div>
   )
 }

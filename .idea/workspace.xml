@@ -11,12 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorkerRegistration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/palette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/typography.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,15 +46,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hoc/Layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/assets/images/logo" />
       <recent name="$PROJECT_DIR$/src/hoc/Layout/Main/components" />
       <recent name="$PROJECT_DIR$/src/views" />
-      <recent name="$PROJECT_DIR$/src/components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/hoc/Layout" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,7 +68,7 @@
       <workItem from="1605500285303" duration="15026000" />
       <workItem from="1605539162110" duration="2395000" />
       <workItem from="1605580793812" duration="2690000" />
-      <workItem from="1605584744655" duration="600000" />
+      <workItem from="1605584744655" duration="5741000" />
     </task>
     <servers />
   </component>
