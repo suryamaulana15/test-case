@@ -6,3 +6,9 @@ export {
   setAlert,
   removeAlert
 } from './alert';
+
+export {
+  fetchProfile,
+  updateProfile,
+  changePassword
+} from './profile';

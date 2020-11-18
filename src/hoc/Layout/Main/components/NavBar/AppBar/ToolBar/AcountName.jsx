@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link as RouterLink, NavLink } from 'react-router-dom'
 import clsx from 'clsx'
 // import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import { Avatar, Typography } from '@material-ui/core'
+import * as actions from "../../../../../../../store/actions";
+import {connect} from "react-redux";
 
 const nameColorWhite = '#FFFFFF'
 // const nameColorBlack = '#000000';
@@ -32,8 +34,13 @@ const Profile = props => {
   const { className, ...rest } = props
 
   const classes = useStyles()
-  const userData = JSON.parse(sessionStorage.getItem('data'))
-  
+  // const userData = JSON.parse(sessionStorage.getItem('data'))
+  const token = sessionStorage.getItem("access_token");
+  const {onFetchUserData, userData} = props;
+  useEffect(() => {
+    onFetchUserData(token);
+  },[])
+
   return (
     <div
       {...rest}
@@ -59,4 +66,17 @@ const Profile = props => {
   )
 }
 
-export default (Profile)
+const mapStateToProps = state => {
+  return {
+    loading: state.profile.loading,
+    userData: state.profile.userData
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onFetchUserData: (token) => dispatch(actions.fetchProfile(token))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile)

@@ -11,18 +11,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Loading/Loading.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Loading/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdatePassword/UpdatePassword.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdatePassword/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdateProfile/UpdateProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdateProfile/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/palette.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/overrides/MuiButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/overrides/MuiButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +51,32 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/UI" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/hoc/Layout" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/UI" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/assets/images/logo" />
       <recent name="$PROJECT_DIR$/src/hoc/Layout/Main/components" />
-      <recent name="$PROJECT_DIR$/src/views" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hoc/Layout" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="profile.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/store/actions/profile.jsx" working-dir="$PROJECT_DIR$/src/store/actions">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.profile.jsx" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,6 +90,10 @@
       <workItem from="1605539162110" duration="2395000" />
       <workItem from="1605580793812" duration="2690000" />
       <workItem from="1605584744655" duration="5741000" />
+      <workItem from="1605597755187" duration="4219000" />
+      <workItem from="1605665404687" duration="3361000" />
+      <workItem from="1605672156862" duration="4724000" />
+      <workItem from="1605682962989" duration="6218000" />
     </task>
     <servers />
   </component>
@@ -88,9 +113,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="354" y="135" key="#Inspections" timestamp="1605667332818">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="354" y="135" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1605667332818" />
     <state x="452" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605513150931">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="452" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605513150931" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1605677173678">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605677173678" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1605677173675">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605677173675" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1605677173673">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605677173673" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1605677173676">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605677173676" />
+    <state x="421" y="82" width="598" height="735" key="find.popup" timestamp="1605675410883">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="82" width="598" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605675410883" />
   </component>
 </project>

@@ -8,6 +8,7 @@ import MainLayout from './hoc/Layout/Main/Main';
 import {
   Login as LoginView,
   Dashboard as DashboardView,
+  Profile as ProfileView,
 } from './views';
 
 const Routes = () => {
@@ -24,6 +25,12 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/dashboard"
+      />
+      <RouteWithLayout
+        component={ProfileView}
+        exact
+        layout={MainLayout}
+        path="/profile"
       />
       <Route
         component={LoginView}

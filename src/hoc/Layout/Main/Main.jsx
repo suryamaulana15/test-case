@@ -90,6 +90,9 @@ const useStyles = makeStyles(theme => ({
   textMenu: {
     color: textMenuWhite,
     fontFamily: "'Nunito', sans-serif"
+  },
+  contentPadding: {
+    padding: '32px 32px 0px',
   }
 }))
 
@@ -123,7 +126,9 @@ const Main = props => {
         <main
           className={classes.content}
         >
-          {props.children}
+          <div className={classes.contentPadding}>
+            {props.children}
+          </div>
           <Hidden only={['xs', 'sm']}>
             <Footer />
           </Hidden>
