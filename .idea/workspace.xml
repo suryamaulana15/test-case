@@ -11,35 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePagination/TablePaginationActions.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePagination/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePaginationArrayActions/TablePaginationsArrayActions.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePaginationArrayActions/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/user.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/user.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme/overrides/MuiSvgIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/User.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/List/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/Store/Store.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/Store/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/Update/Update.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/Update/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/overrides/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/overrides/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +81,7 @@
       <workItem from="1605672156862" duration="4724000" />
       <workItem from="1605682962989" duration="8611000" />
       <workItem from="1605711296664" duration="8340000" />
-      <workItem from="1605747005236" duration="4991000" />
+      <workItem from="1605747005236" duration="6195000" />
     </task>
     <servers />
   </component>

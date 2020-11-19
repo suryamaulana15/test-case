@@ -10,11 +10,14 @@ const useStyles = makeStyles(theme=>({
 }))
 
 const User = props => {
-  const {user} = props;
+  const {user,index,from} = props;
   const classes = useStyles();
   return (
     <Fragment>
       <TableRow key={user.id}>
+        <TableCell>
+          {index+from}
+        </TableCell>
         <TableCell>
           {user.name}
         </TableCell>

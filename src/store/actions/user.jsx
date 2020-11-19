@@ -8,14 +8,15 @@ export const fetchUsersStart = () => {
   }
 }
 
-export const fetchUsersSuccess = (users, currentPage, perPage, totalItems) => {
+export const fetchUsersSuccess = (users, currentPage, perPage, totalItems, from) => {
   return {
     type: actions.FETCH_USERS_SUCCESS,
     user: {
       users,
       currentPage,
       perPage,
-      totalItems
+      totalItems,
+      from
     },
   }
 }
@@ -44,7 +45,7 @@ export const fetchUsers = (page, token) => {
             ...res.data.items[key]
           })
         }
-        dispatch(fetchUsersSuccess(fetchedUsers, res.data.currentPage, 10, res.data.totalItems))
+        dispatch(fetchUsersSuccess(fetchedUsers, res.data.currentPage, res.data.perPage, res.data.totalItems, res.data.from))
       })
       .catch(err => {
         dispatch(fetchUsersFail(err.response.data.message))

@@ -3,9 +3,7 @@ import {
 } from '@material-ui/core'
 import {
   ChevronRight as ChevronRightIcon, ChevronLeft as ChevronLeftIcon, Dashboard as DashboardIcon, 
-  Input as SignOutIcon, ExpandLess, ExpandMore, DescriptionOutlined as DescriptionOutlinedIcon, BookOutlined as
-  BookOutlinedIcon,
-  DevicesOther
+  Input as SignOutIcon, RecentActorsSharp as RecentActorsSharpIcon
 } from '@material-ui/icons'
 // import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import React, { forwardRef, Fragment, useState } from 'react'
@@ -151,22 +149,38 @@ const SideBarComponent = props => {
           className={classes.menus}
         >
           {/* <NavLink to="/dashboard"> */}
-            <Button
-              activeclassname={classes.active}
-              className={classes.button}
-              component={CustomRouterLink}
-              to='/dashboard'
-              onClick={props.closed}
-            >
-              <ListItem button key='dashboard'>
-                <ListItemIcon>
-                  <DashboardIcon style={{ color: textMenuWhite }} />
-                </ListItemIcon>
-                <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Dashboard</Typography>} />
-              </ListItem>
-            </Button>
+          <Button
+            activeclassname={classes.active}
+            className={classes.button}
+            component={CustomRouterLink}
+            to='/dashboard'
+            onClick={props.closed}
+          >
+            <ListItem button key='dashboard'>
+              <ListItemIcon>
+                <DashboardIcon style={{ color: textMenuWhite }} />
+              </ListItemIcon>
+              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Dashboard</Typography>} />
+            </ListItem>
+          </Button>
 
-          
+          <Button
+            activeclassname={classes.active}
+            className={classes.button}
+            component={CustomRouterLink}
+            to='/user'
+            onClick={props.closed}
+          >
+            <ListItem button key='user'>
+              <ListItemIcon>
+                <RecentActorsSharpIcon style={{ color: textMenuWhite }} />
+              </ListItemIcon>
+              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>User</Typography>} />
+            </ListItem>
+          </Button>
+
+
+
           {/*<Button*/}
           {/*  activeclassname={classes.active}*/}
           {/*  className={classes.button}*/}

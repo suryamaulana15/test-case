@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme=> ({
 }))
 
 const columns = [
+  { id: 'nomor', label: 'NO' },
   { id: 'name', label: 'Nama' },
   { id: 'email', label: 'E-mail' },
   { id: 'action', label: 'Action', align: 'right' }
@@ -58,10 +59,12 @@ const List = props => {
     tableBody = (
       <Fragment>
         <TableBody>
-          {users.users.map((user) => (
+          {users.users.map((user,index) => (
             <User
               user={user}
               key={user.id}
+              from={users.from}
+              index={index}
             //   // detailed={() => props.show(asset)}
               edited={() => props.edit(user)}
             //   // deleted={() => {

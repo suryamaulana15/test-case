@@ -6,7 +6,8 @@ const initialState = {
     users: [],
     currentPage: 1,
     perPage: 0,
-    totalItems: 0
+    totalItems: 0,
+    from: 0,
   },
   changing: 0,
   updateChanging: 0,
