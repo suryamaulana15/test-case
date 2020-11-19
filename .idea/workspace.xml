@@ -11,27 +11,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Loading/Loading.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Loading/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdatePassword/UpdatePassword.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdatePassword/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdateProfile/UpdateProfile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/UpdateProfile/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/components/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Profile/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePagination/TablePaginationActions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePagination/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePaginationArrayActions/TablePaginationsArrayActions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePaginationArrayActions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/user.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/user.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/overrides/MuiSvgIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/User.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/List/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/Store/Store.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/Store/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/Update/Update.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/Update/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/auth.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/overrides/MuiButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/overrides/MuiButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/overrides/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/overrides/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +50,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kMArEaldCn8N3djwnOEjM147J8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,18 +60,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/UI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/User/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/User/components" />
       <recent name="$PROJECT_DIR$/src/components/UI" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/assets/images/logo" />
-      <recent name="$PROJECT_DIR$/src/hoc/Layout/Main/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/hoc/Layout" />
@@ -93,7 +102,9 @@
       <workItem from="1605597755187" duration="4219000" />
       <workItem from="1605665404687" duration="3361000" />
       <workItem from="1605672156862" duration="4724000" />
-      <workItem from="1605682962989" duration="6218000" />
+      <workItem from="1605682962989" duration="8611000" />
+      <workItem from="1605711296664" duration="8340000" />
+      <workItem from="1605747005236" duration="4991000" />
     </task>
     <servers />
   </component>
@@ -141,5 +152,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="82" width="598" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605675410883" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605748071400">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605748071400" />
   </component>
 </project>

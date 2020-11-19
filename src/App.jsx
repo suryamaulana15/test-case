@@ -31,7 +31,7 @@ const App = props => {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">{"Update info"}</DialogTitle>
+          <DialogTitle id="alert-dialog-title">{"Store info"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               Update aplikasi nya dulu yuk

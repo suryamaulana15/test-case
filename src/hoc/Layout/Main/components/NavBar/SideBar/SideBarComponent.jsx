@@ -165,163 +165,59 @@ const SideBarComponent = props => {
                 <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Dashboard</Typography>} />
               </ListItem>
             </Button>
-          {/* </NavLink> */}
-          {/* <NavLink to="/master"> */}
-          <Button
-            activeclassname={classes.active}
-            className={classes.button}
-            // component={CustomRouterLink}
-            // to='/purchase-order'
-            onClick={() => handleClick('master')}
-          >
-            <ListItem button key='master'>
-              <ListItemIcon>
-                <BookOutlinedIcon style={{ color: textMenuWhite }} />
-              </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Master</Typography>} />
-            </ListItem>
-            {masterOpen ? <ExpandLess style={{ color: textMenuWhite }} /> : <ExpandMore style={{ color: textMenuWhite }} />}
-          </Button>
-          <Collapse in={masterOpen} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItem 
-                key='jenis'
-                className={classes.nested}
-              >
-                <Button
-                  fullWidth
-                  activeClassName={classes.active}
-                  className={classes.button}
-                  component={CustomRouterLink}
-                  onClick={props.closed}
-                  to='/jenis'
-                >
-                    <div className={classes.textMenu}>jenis</div>
-                </Button>
-              </ListItem>
-            </List>
 
-            <List component="div" disablePadding>
-              <ListItem 
-                key='kategori'
-                className={classes.nested}
-              >
-                <Button
-                  fullWidth
-                  activeClassName={classes.active}
-                  className={classes.button}
-                  component={CustomRouterLink}
-                  onClick={props.closed}
-                  to='/kategori'
-                >
-                    <div className={classes.textMenu}>Kategori</div>
-                </Button>
-              </ListItem>
-            </List>
-
-            <List component="div" disablePadding>
-              <ListItem 
-                key='bagian'
-                className={classes.nested}
-              >
-                <Button
-                  fullWidth
-                  activeClassName={classes.active}
-                  className={classes.button}
-                  component={CustomRouterLink}
-                  onClick={props.closed}
-                  to='/bagian'
-                >
-                    <div className={classes.textMenu}>Bagian</div>
-                </Button>
-              </ListItem>
-            </List>
-          </Collapse>
-          {/* </NavLink> */}
-          {/* <NavLink to="/aset-wakaf"> */}
-            <Button
-              activeclassname={classes.active}
-              className={classes.button}
-              component={CustomRouterLink}
-              to='/manajemen-aset'
-              onClick={props.closed}
-            >
-              <ListItem button key='manajemen-aset'>
-                <ListItemIcon>
-                  <DevicesOther style={{ color: textMenuWhite }} />
-                </ListItemIcon>
-                <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Manajemen Aset</Typography>} />
-              </ListItem>
-            </Button>
-          {/* </NavLink> */}
-          {/* <NavLink to="/manajemen-aset"> */}
-            {/* <Button
-              activeclassname={classes.active}
-              className={classes.button}
-              component={CustomRouterLink}
-              to='/manajemen-aset'
-              onClick={props.closed}
-            >
-              <ListItem button key='manajemen-aset'>
-                <ListItemIcon>
-                  <ReceiptIcon style={{ color: textMenuWhite }} />
-                </ListItemIcon>
-                <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Manajemen Aset</Typography>} />
-              </ListItem>
-            </Button> */}
-          {/* </NavLink> */}
           
-          <Button
-            activeclassname={classes.active}
-            className={classes.button}
-            // component={CustomRouterLink}
-            // to='/purchase-order'
-            onClick={() => handleClick('laporan')}
-          >
-            <ListItem button key='laporan'>
-              <ListItemIcon>
-                <DescriptionOutlinedIcon style={{ color: textMenuWhite }} />
-              </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Laporan</Typography>} />
-            </ListItem>
-            {reportOpen ? <ExpandLess style={{ color: textMenuWhite }} /> : <ExpandMore style={{ color: textMenuWhite }} />}
-          </Button>
-          <Collapse in={reportOpen} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItem 
-                key='laporan-aset'
-                className={classes.nested}
-              >
-                <Button
-                  fullWidth
-                  activeClassName={classes.active}
-                  className={classes.button}
-                  component={CustomRouterLink}
-                  onClick={props.closed}
-                  to='/laporan-aset'
-                >
-                    <div className={classes.textMenu}>Laporan Aset</div>
-                </Button>
-              </ListItem>
-            </List>
-            <List component="div" disablePadding>
-              <ListItem 
-                key='laporan-qr-aset'
-                className={classes.nested}
-              >
-                <Button
-                  fullWidth
-                  activeClassName={classes.active}
-                  className={classes.button}
-                  component={CustomRouterLink}
-                  onClick={props.closed}
-                  to='/laporan-qr-aset'
-                >
-                    <div className={classes.textMenu}>Laporan QR Aset</div>
-                </Button>
-              </ListItem>
-            </List>
-          </Collapse>
+          {/*<Button*/}
+          {/*  activeclassname={classes.active}*/}
+          {/*  className={classes.button}*/}
+          {/*  // component={CustomRouterLink}*/}
+          {/*  // to='/purchase-order'*/}
+          {/*  onClick={() => handleClick('laporan')}*/}
+          {/*>*/}
+          {/*  <ListItem button key='laporan'>*/}
+          {/*    <ListItemIcon>*/}
+          {/*      <DescriptionOutlinedIcon style={{ color: textMenuWhite }} />*/}
+          {/*    </ListItemIcon>*/}
+          {/*    <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Laporan</Typography>} />*/}
+          {/*  </ListItem>*/}
+          {/*  {reportOpen ? <ExpandLess style={{ color: textMenuWhite }} /> : <ExpandMore style={{ color: textMenuWhite }} />}*/}
+          {/*</Button>*/}
+          {/*<Collapse in={reportOpen} timeout="auto" unmountOnExit>*/}
+          {/*  <List component="div" disablePadding>*/}
+          {/*    <ListItem */}
+          {/*      key='laporan-aset'*/}
+          {/*      className={classes.nested}*/}
+          {/*    >*/}
+          {/*      <Button*/}
+          {/*        fullWidth*/}
+          {/*        activeClassName={classes.active}*/}
+          {/*        className={classes.button}*/}
+          {/*        component={CustomRouterLink}*/}
+          {/*        onClick={props.closed}*/}
+          {/*        to='/laporan-aset'*/}
+          {/*      >*/}
+          {/*          <div className={classes.textMenu}>Laporan Aset</div>*/}
+          {/*      </Button>*/}
+          {/*    </ListItem>*/}
+          {/*  </List>*/}
+          {/*  <List component="div" disablePadding>*/}
+          {/*    <ListItem */}
+          {/*      key='laporan-qr-aset'*/}
+          {/*      className={classes.nested}*/}
+          {/*    >*/}
+          {/*      <Button*/}
+          {/*        fullWidth*/}
+          {/*        activeClassName={classes.active}*/}
+          {/*        className={classes.button}*/}
+          {/*        component={CustomRouterLink}*/}
+          {/*        onClick={props.closed}*/}
+          {/*        to='/laporan-qr-aset'*/}
+          {/*      >*/}
+          {/*          <div className={classes.textMenu}>Laporan QR Aset</div>*/}
+          {/*      </Button>*/}
+          {/*    </ListItem>*/}
+          {/*  </List>*/}
+          {/*</Collapse>*/}
 
           {/* <NavLink to="/logout"> */}
             <Button
@@ -338,14 +234,6 @@ const SideBarComponent = props => {
               </ListItem>
             </Button>
           {/* </NavLink> */}
-
-          {/* <div className={classes.bottomPush}>
-            <ListItem button key='kecilin'>
-              <IconButton onClick={handleDrawerClose}>
-                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-              </IconButton>
-            </ListItem>
-          </div> */}
         </List>
       </SwipeableDrawer>
     </Fragment>

@@ -12,3 +12,9 @@ export {
   updateProfile,
   changePassword
 } from './profile';
+
+export {
+  fetchUsers,
+  storeUser,
+  updateUser
+} from './user';

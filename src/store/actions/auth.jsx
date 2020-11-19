@@ -1,6 +1,6 @@
-import * as actions from './actionTypes'
-import axios from '../../axios-orders'
-import { setAlert } from './alert'
+import * as actions from './actionTypes';
+import axios from '../../axios-orders';
+import { setAlert } from './alert';
 
 export const authStart = () => {
   return {

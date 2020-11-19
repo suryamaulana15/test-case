@@ -9,6 +9,7 @@ import {
   Login as LoginView,
   Dashboard as DashboardView,
   Profile as ProfileView,
+  User as UserView,
 } from './views';
 
 const Routes = () => {
@@ -31,6 +32,12 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/profile"
+      />
+      <RouteWithLayout
+        component={UserView}
+        exact
+        layout={MainLayout}
+        path="/user"
       />
       <Route
         component={LoginView}
