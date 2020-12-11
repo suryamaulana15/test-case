@@ -11,12 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserAkses/UserAkses.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserAkses/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/user.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/User.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/Store/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/Store/Store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/Update/Update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/Update/Update.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/User/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -81,7 +91,23 @@
       <workItem from="1605672156862" duration="4724000" />
       <workItem from="1605682962989" duration="8611000" />
       <workItem from="1605711296664" duration="8340000" />
-      <workItem from="1605747005236" duration="6195000" />
+      <workItem from="1605747005236" duration="6684000" />
+      <workItem from="1605766309012" duration="1370000" />
+      <workItem from="1606325960378" duration="556000" />
+      <workItem from="1606353045028" duration="1087000" />
+      <workItem from="1606359766533" duration="4499000" />
+      <workItem from="1606447864194" duration="2748000" />
+      <workItem from="1606458175058" duration="1469000" />
+      <workItem from="1606716737927" duration="11164000" />
+      <workItem from="1606797528900" duration="6569000" />
+      <workItem from="1606887883081" duration="6668000" />
+      <workItem from="1606961826638" duration="624000" />
+      <workItem from="1606969427678" duration="7607000" />
+      <workItem from="1607051851950" duration="6092000" />
+      <workItem from="1607148889521" duration="190000" />
+      <workItem from="1607150796232" duration="24000" />
+      <workItem from="1607586915678" duration="312000" />
+      <workItem from="1607655720486" duration="1571000" />
     </task>
     <servers />
   </component>
@@ -129,9 +155,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="82" width="598" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605675410883" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605748071400">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1606987442918">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605748071400" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606987442918" />
   </component>
 </project>

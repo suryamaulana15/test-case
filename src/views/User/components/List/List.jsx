@@ -25,16 +25,18 @@ const columns = [
   { id: 'nomor', label: 'NO' },
   { id: 'name', label: 'Nama' },
   { id: 'email', label: 'E-mail' },
+  { id: 'no_telepon', label: 'No HP' },
   { id: 'action', label: 'Action', align: 'right' }
 ]
 
 const List = props => {
   const classes = useStyles();
-  const {users, loading, onFetchUsers,changing} = props;
+  const {users, loading, onFetchUsers,changing,onClearUserAkses} = props;
   const token = sessionStorage.getItem("access_token");
   useEffect(()=> {
+    onClearUserAkses()
     onFetchUsers(1, token);
-  },[changing]);
+  },[changing,onClearUserAkses]);
 
   function isEmpty(obj) {
     for(var key in obj) {
@@ -50,7 +52,6 @@ const List = props => {
 
   let tableBody = '';
   if(!isEmpty(users.users)){
-    console.log(users)
     const page = users.currentPage - 1;
     const rowsPerPage = users.perPage;
     const countRows = users.totalItems;
@@ -67,6 +68,7 @@ const List = props => {
               index={index}
             //   // detailed={() => props.show(asset)}
               edited={() => props.edit(user)}
+              accessed={() => props.access(user.id)}
             //   // deleted={() => {
             //   //   props.onCloseAlert()
             //   //   props.onDialogBox('Yakin ingin menghapus data Aset? ', asset, asset.uuid, actions.deleteAsetWakaf)
@@ -131,7 +133,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onFetchUsers: (page, token) => dispatch(actions.fetchUsers(page, token))
+    onFetchUsers: (page, token) => dispatch(actions.fetchUsers(page, token)),
+    onClearUserAkses: () => dispatch(actions.clearUserAkses()),
   }
 }
 

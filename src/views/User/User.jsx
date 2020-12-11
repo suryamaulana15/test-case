@@ -1,9 +1,10 @@
 import React, {Fragment, useEffect, useState} from "react";
 import {Button, Grid, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-import {List,Store,Update} from './components';
-import {Modal} from "../../components/UI";
+import {List,Store,Update,UserAkses} from './components';
+import {Loading, Modal} from "../../components/UI";
 import {connect} from "react-redux";
+import * as actions from "../../store/actions";
 const useStyles = makeStyles(theme=> ({
   contentPaddingBottom:{
     paddingBottom: theme.spacing(3)
@@ -13,6 +14,7 @@ const useStyles = makeStyles(theme=> ({
 const User = props => {
   const classes = useStyles();
   const {changing,updateChanging,currentPage} = props;
+  const token = sessionStorage.getItem("access_token");
 
   useEffect(() => {
     closedModalDialog();
@@ -51,6 +53,15 @@ const User = props => {
     setForm(<Update user={user} page={currentPage}/>);
   }
 
+  const access = user => {
+    setModalState({
+      open: true,
+      title: 'User Akses',
+      maxWidth: 'sm'
+    });
+    setForm(<UserAkses userId={user} page={currentPage}/>)
+  }
+
   return (
     <Fragment>
       <Modal
@@ -72,7 +83,7 @@ const User = props => {
       </Grid>
       <Grid container>
         <Grid item lg={12} md={12} sm={12} xs={12}>
-          <List edit={(user) => edit(user)}/>
+          <List edit={(user) => edit(user)} access={(user) => access(user)}/>
         </Grid>
       </Grid>
     </Fragment>
@@ -83,8 +94,15 @@ const mapStateToProps = state => {
   return {
     currentPage: state.user.user.currentPage,
     changing: state.user.changing,
-    updateChanging: state.user.updateChanging
+    updateChanging: state.user.updateChanging,
+    loading: state.user.loading
   };
 };
 
-export default connect(mapStateToProps)(User);
+const mapDispatchToProps = dispatch => {
+  return {
+    onGetUserAkses : (id, token) => dispatch(actions.getUserAkses(id, token)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(User);

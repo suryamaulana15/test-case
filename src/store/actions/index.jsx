@@ -16,5 +16,9 @@ export {
 export {
   fetchUsers,
   storeUser,
-  updateUser
+  updateUser,
+  getUserAkses,
+  clearUserAkses,
+  updateUserAkses,
+  clearErrorUser
 } from './user';

@@ -6,6 +6,9 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles(theme=>({
   btnEdit: {
     color: theme.palette.success.main
+  },
+  btnWarning: {
+    color: theme.palette.warning.main
   }
 }))
 
@@ -24,10 +27,18 @@ const User = props => {
         <TableCell>
           {user.email}
         </TableCell>
+        <TableCell>
+          {user.phone}
+        </TableCell>
         <TableCell align="right">
           <Tooltip title="Edit User">
             <IconButton aria-label="edit" onClick={props.edited}>
               <EditIcon className={classes.btnEdit}/>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="User Akses">
+            <IconButton aria-label="user-akses" onClick={props.accessed}>
+              <EditIcon className={classes.btnWarning}/>
             </IconButton>
           </Tooltip>
         </TableCell>

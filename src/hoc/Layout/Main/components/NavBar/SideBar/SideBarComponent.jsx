@@ -1,5 +1,6 @@
 import {
-  Button, IconButton, List, ListItem, SwipeableDrawer, ListItemIcon, ListItemText, Typography, useTheme, makeStyles, Collapse
+  Button, IconButton, List, ListItem, SwipeableDrawer, ListItemIcon, ListItemText, Typography, useTheme, makeStyles, Collapse,
+  Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions
 } from '@material-ui/core'
 import {
   ChevronRight as ChevronRightIcon, ChevronLeft as ChevronLeftIcon, Dashboard as DashboardIcon, 
@@ -8,7 +9,7 @@ import {
 // import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import React, { forwardRef, Fragment, useState } from 'react'
 import AcountName from '../AppBar/ToolBar/AcountName'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 const drawerWidth = 240
 // const drawerColorBlue = '#011747'
@@ -126,6 +127,36 @@ const SideBarComponent = props => {
     }
   };
 
+  // Dialog Box
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const handleDialogClose = () => {
+    setDialogOpen(false);
+  };
+
+  const handleDoLogout = () => {
+    sessionStorage.removeItem('access_token');
+    sessionStorage.removeItem('expires_in');
+    sessionStorage.removeItem('role');
+    sessionStorage.removeItem('data');
+    sessionStorage.clear();
+    setRedirect({values: true});
+  }
+
+  const [redirect, setRedirect] = useState({
+    values : false
+  });
+
+  const handlingSignout = event => {
+    event.persist();
+    setDialogOpen(true)
+
+  };
+
+  if (redirect.values) {
+    return <Redirect to='/sign-in'/>;
+  };
+
   return (
     <Fragment>
       <SwipeableDrawer
@@ -179,77 +210,44 @@ const SideBarComponent = props => {
             </ListItem>
           </Button>
 
-
-
-          {/*<Button*/}
-          {/*  activeclassname={classes.active}*/}
-          {/*  className={classes.button}*/}
-          {/*  // component={CustomRouterLink}*/}
-          {/*  // to='/purchase-order'*/}
-          {/*  onClick={() => handleClick('laporan')}*/}
-          {/*>*/}
-          {/*  <ListItem button key='laporan'>*/}
-          {/*    <ListItemIcon>*/}
-          {/*      <DescriptionOutlinedIcon style={{ color: textMenuWhite }} />*/}
-          {/*    </ListItemIcon>*/}
-          {/*    <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Laporan</Typography>} />*/}
-          {/*  </ListItem>*/}
-          {/*  {reportOpen ? <ExpandLess style={{ color: textMenuWhite }} /> : <ExpandMore style={{ color: textMenuWhite }} />}*/}
-          {/*</Button>*/}
-          {/*<Collapse in={reportOpen} timeout="auto" unmountOnExit>*/}
-          {/*  <List component="div" disablePadding>*/}
-          {/*    <ListItem */}
-          {/*      key='laporan-aset'*/}
-          {/*      className={classes.nested}*/}
-          {/*    >*/}
-          {/*      <Button*/}
-          {/*        fullWidth*/}
-          {/*        activeClassName={classes.active}*/}
-          {/*        className={classes.button}*/}
-          {/*        component={CustomRouterLink}*/}
-          {/*        onClick={props.closed}*/}
-          {/*        to='/laporan-aset'*/}
-          {/*      >*/}
-          {/*          <div className={classes.textMenu}>Laporan Aset</div>*/}
-          {/*      </Button>*/}
-          {/*    </ListItem>*/}
-          {/*  </List>*/}
-          {/*  <List component="div" disablePadding>*/}
-          {/*    <ListItem */}
-          {/*      key='laporan-qr-aset'*/}
-          {/*      className={classes.nested}*/}
-          {/*    >*/}
-          {/*      <Button*/}
-          {/*        fullWidth*/}
-          {/*        activeClassName={classes.active}*/}
-          {/*        className={classes.button}*/}
-          {/*        component={CustomRouterLink}*/}
-          {/*        onClick={props.closed}*/}
-          {/*        to='/laporan-qr-aset'*/}
-          {/*      >*/}
-          {/*          <div className={classes.textMenu}>Laporan QR Aset</div>*/}
-          {/*      </Button>*/}
-          {/*    </ListItem>*/}
-          {/*  </List>*/}
-          {/*</Collapse>*/}
-
-          {/* <NavLink to="/logout"> */}
-            <Button
-              className={classes.button}
-              component={CustomRouterLink}
-              to='/logout'
-              onClick={props.closed}
-            >
-              <ListItem button key='signout'>
-                <ListItemIcon>
-                  <SignOutIcon style={{ color: textMenuWhite }} />
-                </ListItemIcon>
-                <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Sign Out</Typography>} />
-              </ListItem>
-            </Button>
+          <Button
+            className={classes.button}
+            component={CustomRouterLink}
+            // to='/logout'
+            // onClick={props.closed}
+            onClick={handlingSignout}
+          >
+            <ListItem button key='signout'>
+              <ListItemIcon>
+                <SignOutIcon style={{ color: textMenuWhite }} />
+              </ListItemIcon>
+              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Sign Out</Typography>} />
+            </ListItem>
+          </Button>
           {/* </NavLink> */}
         </List>
       </SwipeableDrawer>
+      <Dialog
+        open={dialogOpen}
+        onClose={handleDialogClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Logout Confirmation"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Apakah anda ingin keluar?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleDialogClose} color="primary">
+            Tidak
+          </Button>
+          <Button onClick={handleDoLogout} color="primary" autoFocus>
+            Ya
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Fragment>
   )
 }

@@ -9,6 +9,7 @@ const initialState = {
     totalItems: 0,
     from: 0,
   },
+  userAkses: {},
   changing: 0,
   updateChanging: 0,
   error: {},
@@ -66,6 +67,55 @@ const updateUserFail = (state, action) => {
   })
 }
 
+const getUserAksesStart = (state, action) => {
+  return updateObject(state, {loading: true})
+}
+
+const getUserAksesSuccess = (state, action) => {
+  return updateObject(state, {
+    userAkses: action.userAkses,
+    loading: false,
+  })
+}
+
+const getUserAksesFail = (state, action) => {
+  return updateObject(state, {
+    loading: false
+  })
+}
+
+const clearUserAkses = (state, action) => {
+  return updateObject(state, {
+    userAkses: {},
+  });
+};
+
+const updateUserAksesStart = (state, action) => {
+  return updateObject(state, {
+    loading: true,
+  });
+};
+
+const updateUserAksesSuccess = (state, action) => {
+  return updateObject(state, {
+    updateChanging: state.updateChanging+1,
+    loading: false,
+  });
+};
+
+const updateUserAksesFail = (state, action) => {
+  return updateObject(state, {
+    error: action.error,
+    loading: false
+  })
+}
+
+const clearErrorUser = (state, action) => {
+  return updateObject(state, {
+    error: {}
+  })
+}
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_USERS_START: return fetchUsersStart(state, action)
@@ -77,6 +127,14 @@ const reducer = (state = initialState, action) => {
     case actionTypes.UPDATE_USER_START: return updateUserStart(state, action)
     case actionTypes.UPDATE_USER_SUCCESS: return updateUserSuccess(state, action)
     case actionTypes.UPDATE_USER_FAIL: return updateUserFail(state, action)
+    case actionTypes.GET_USER_AKSES_START: return getUserAksesStart(state, action)
+    case actionTypes.GET_USER_AKSES_SUCCESS: return getUserAksesSuccess(state, action)
+    case actionTypes.GET_USER_AKSES_FAIL: return getUserAksesFail(state, action)
+    case actionTypes.CLEAR_USER_AKSES: return clearUserAkses(state, action)
+    case actionTypes.UPDATE_USER_AKSES_START: return updateUserAksesStart(state, action)
+    case actionTypes.UPDATE_USER_AKSES_SUCCESS: return updateUserAksesSuccess(state, action)
+    case actionTypes.UPDATE_USER_AKSES_FAIL: return updateUserAksesFail(state, action)
+    case actionTypes.CLEAR_ERROR_USER: return  clearErrorUser(state, action)
 
     default: return state
   }

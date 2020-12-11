@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import {Button, Card, CardContent, Grid, TextField} from "@material-ui/core";
 import * as actions from '../../../../store/actions';
 import {connect} from "react-redux";
@@ -10,12 +10,20 @@ const schema = yup.object().shape({
 });
 
 const Store = props => {
-  const {onStoreUser} = props;
+  const {onStoreUser, errors, onClearErrorUser} = props;
+
+  useEffect(() => {
+    onClearErrorUser()
+  },[onClearErrorUser])
+
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     password: '',
+    phone: 0,
   });
+
+  console.log(errors);
 
   const handleChange = (event) => {
     const target = event.target.name
@@ -38,7 +46,7 @@ const Store = props => {
     }
   }
 
-  const { register, handleSubmit, errors } = useForm({
+  const { register, handleSubmit } = useForm({
     resolver: yupResolver(schema)
   })
 
@@ -61,8 +69,8 @@ const Store = props => {
                   name="name"
                   label="Name"
                   inputRef={register}
-                  // error={!!errors.name}
-                  // helperText={errors.name && errors.name.message}
+                  error={!!errors.name}
+                  helperText={errors.name && errors.name.msg}
                   // className={classes.textField}
                   onChange={handleChange}
                   defaultValue={formState.name}
@@ -77,11 +85,27 @@ const Store = props => {
                   name="email"
                   label="Email"
                   inputRef={register}
-                  // error={!!errors.name}
-                  // helperText={errors.name && errors.name.message}
+                  error={!!errors.email}
+                  helperText={errors.email && errors.email.msg}
                   // className={classes.textField}
                   onChange={handleChange}
                   defaultValue={formState.email}
+                />
+              </Grid>
+
+              <Grid item lg={12} md={12} sm={12} xs={12}>
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  fullWidth
+                  name="phone"
+                  label="Phone"
+                  inputRef={register}
+                  error={!!errors.phone}
+                  helperText={errors.phone && errors.phone.msg}
+                  // className={classes.textField}
+                  onChange={handleChange}
+                  defaultValue={formState.phone}
                 />
               </Grid>
 
@@ -94,8 +118,8 @@ const Store = props => {
                   name="password"
                   label="Password"
                   inputRef={register}
-                  // error={!!errors.name}
-                  // helperText={errors.name && errors.name.message}
+                  error={!!errors.password}
+                  helperText={errors.password && errors.password.msg}
                   // className={classes.textField}
                   onChange={handleChange}
                   defaultValue={formState.password}
@@ -114,10 +138,18 @@ const Store = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
   return {
-    onStoreUser: (storeData, token) => dispatch(actions.storeUser(storeData, token))
+    errors: state.user.error,
+    loading: state.user.loading,
   }
 }
 
-export default connect(null, mapDispatchToProps)(Store);
+const mapDispatchToProps = dispatch => {
+  return {
+    onStoreUser: (storeData, token) => dispatch(actions.storeUser(storeData, token)),
+    onClearErrorUser: () => dispatch(actions.clearErrorUser())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Store);

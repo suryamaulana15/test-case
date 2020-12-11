@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import {Button, Card, CardContent, Grid, TextField} from "@material-ui/core";
 import * as actions from '../../../../store/actions';
 import {connect} from "react-redux";
@@ -10,7 +10,10 @@ const schema = yup.object().shape({
 });
 
 const Update = props => {
-  const {user,onUpdateUser,page} = props;
+  const {user,onUpdateUser,page, errors, loading, onClearErrorUser} = props;
+  useEffect(() => {
+    onClearErrorUser()
+  },[onClearErrorUser])
   const [formState, setFormState] = useState({
     name: user.name,
   });
@@ -36,7 +39,7 @@ const Update = props => {
     }
   }
 
-  const { register, handleSubmit, errors } = useForm({
+  const { register, handleSubmit } = useForm({
     resolver: yupResolver(schema)
   })
 
@@ -59,8 +62,8 @@ const Update = props => {
                   name="name"
                   label="Name"
                   inputRef={register}
-                  // error={!!errors.name}
-                  // helperText={errors.name && errors.name.message}
+                  error={!!errors.name}
+                  helperText={errors.name && errors.name.msg}
                   // className={classes.textField}
                   onChange={handleChange}
                   defaultValue={formState.name}
@@ -79,10 +82,18 @@ const Update = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
   return {
-    onUpdateUser: (storeData, id, token, page) => dispatch(actions.updateUser(storeData, id, token, page))
+    errors: state.user.error,
+    loading: state.user.loading
   }
 }
 
-export default connect(null,mapDispatchToProps)(Update);
+const mapDispatchToProps = dispatch => {
+  return {
+    onUpdateUser: (storeData, id, token, page) => dispatch(actions.updateUser(storeData, id, token, page)),
+    onClearErrorUser: () => dispatch(actions.clearErrorUser())
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Update);
