@@ -14,7 +14,7 @@ build-docker-prd:
   only:
     - master
   script:
-    - echo "REACT_APP_BASE_URL=${API_URL_PRD}" > .env
+    - echo "REACT_APP_BASE_URL=${API_PRD}" > .env
     - docker build -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} .
     - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
 
@@ -28,5 +28,5 @@ deploy-docker-prd:
     - mkdir ~/.ssh && chmod 700 ~/.ssh
     - echo -e "Host *\nStrictHostKeyChecking=no\nUserKnownHostsFile=/dev/null" > ~/.ssh/config
     - apk add --no-cache gettext
-    - envsubst < stack.yml > deploy.yml
-    - DOCKER_HOST=ssh://deploy@${DOCKER_SERVER_PRD} docker stack deploy --with-registry-auth -c deploy.yml chatbot-www-prd
+    - envsubst < stack.prd.yml > deploy.yml
+    - DOCKER_HOST=${SERVER_URL_PRD} docker stack deploy --with-registry-auth -c deploy.yml ${SERVICE_NAME}-prd
