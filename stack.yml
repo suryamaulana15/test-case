@@ -10,9 +10,9 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.chatbot-www-prd.rule=Host(`chatbot.eoatech.com`)"
-        - "traefik.http.routers.chatbot-www-prd.tls.certresolver=le"
-        - "traefik.http.services.chatbot-www-prd.loadbalancer.server.port=8080"
+        - "traefik.http.routers.${SERVICE_NAME}-prd.rule=Host(`${URL_PRD}`)"
+        - "traefik.http.routers.${SERVICE_NAME}-prd.tls.certresolver=le"
+        - "traefik.http.services.${SERVICE_NAME}-prd.loadbalancer.server.port=8080"
     image: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
     networks:
-      - reverse-proxy
+        - reverse-proxy
