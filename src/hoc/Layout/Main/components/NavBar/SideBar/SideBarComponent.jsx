@@ -9,7 +9,7 @@ import {
 // import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import React, { forwardRef, Fragment, useState } from 'react'
 import AcountName from '../AppBar/ToolBar/AcountName'
-import { Link, Redirect } from 'react-router-dom'
+import { Link,NavLink } from 'react-router-dom'
 
 const drawerWidth = 240
 // const drawerColorBlue = '#011747'
@@ -179,52 +179,52 @@ const SideBarComponent = props => {
         <List
           className={classes.menus}
         >
-          {/* <NavLink to="/dashboard"> */}
+           <NavLink to="/produk">
           <Button
             activeclassname={classes.active}
             className={classes.button}
             component={CustomRouterLink}
-            to='/dashboard'
+            to='/produk'
             onClick={props.closed}
           >
-            <ListItem button key='dashboard'>
+            <ListItem button key='product'>
               <ListItemIcon>
                 <DashboardIcon style={{ color: textMenuWhite }} />
               </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Dashboard</Typography>} />
+              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Product</Typography>} />
             </ListItem>
           </Button>
 
-          <Button
-            activeclassname={classes.active}
-            className={classes.button}
-            component={CustomRouterLink}
-            to='/user'
-            onClick={props.closed}
-          >
-            <ListItem button key='user'>
-              <ListItemIcon>
-                <RecentActorsSharpIcon style={{ color: textMenuWhite }} />
-              </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>User</Typography>} />
-            </ListItem>
-          </Button>
+          {/*<Button*/}
+          {/*  activeclassname={classes.active}*/}
+          {/*  className={classes.button}*/}
+          {/*  component={CustomRouterLink}*/}
+          {/*  to='/user'*/}
+          {/*  onClick={props.closed}*/}
+          {/*>*/}
+          {/*  <ListItem button key='user'>*/}
+          {/*    <ListItemIcon>*/}
+          {/*      <RecentActorsSharpIcon style={{ color: textMenuWhite }} />*/}
+          {/*    </ListItemIcon>*/}
+          {/*    <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>User</Typography>} />*/}
+          {/*  </ListItem>*/}
+          {/*</Button>*/}
 
-          <Button
-            className={classes.button}
-            component={CustomRouterLink}
-            // to='/logout'
-            // onClick={props.closed}
-            onClick={handlingSignout}
-          >
-            <ListItem button key='signout'>
-              <ListItemIcon>
-                <SignOutIcon style={{ color: textMenuWhite }} />
-              </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Sign Out</Typography>} />
-            </ListItem>
-          </Button>
-          {/* </NavLink> */}
+          {/*<Button*/}
+          {/*  className={classes.button}*/}
+          {/*  component={CustomRouterLink}*/}
+          {/*  // to='/logout'*/}
+          {/*  // onClick={props.closed}*/}
+          {/*  onClick={handlingSignout}*/}
+          {/*>*/}
+          {/*  <ListItem button key='signout'>*/}
+          {/*    <ListItemIcon>*/}
+          {/*      <SignOutIcon style={{ color: textMenuWhite }} />*/}
+          {/*    </ListItemIcon>*/}
+          {/*    <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Sign Out</Typography>} />*/}
+          {/*  </ListItem>*/}
+          {/*</Button>*/}
+           </NavLink>
         </List>
       </SwipeableDrawer>
       <Dialog

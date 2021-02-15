@@ -35,11 +35,15 @@ const Profile = props => {
 
   const classes = useStyles()
   // const userData = JSON.parse(sessionStorage.getItem('data'))
-  const token = sessionStorage.getItem("access_token");
-  const {onFetchUserData, userData} = props;
-  useEffect(() => {
-    onFetchUserData(token);
-  },[])
+  // const token = sessionStorage.getItem("access_token");
+  // const {onFetchUserData, userData} = props;
+  // useEffect(() => {
+  //   onFetchUserData(token);
+  // },[])
+  const userData = {
+    "name": "Surya Maulana",
+    "roleId": "Admin"
+  }
 
   return (
     <div
@@ -68,14 +72,14 @@ const Profile = props => {
 
 const mapStateToProps = state => {
   return {
-    loading: state.profile.loading,
-    userData: state.profile.userData
+    // loading: state.profile.loading,
+    // userData: state.profile.userData
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onFetchUserData: (token) => dispatch(actions.fetchProfile(token))
+    // onFetchUserData: (token) => dispatch(actions.fetchProfile(token))
   }
 }
 

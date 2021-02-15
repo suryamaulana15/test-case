@@ -6,10 +6,13 @@ import MainLayout from './hoc/Layout/Main/Main';
 
 
 import {
-  Login as LoginView,
-  Dashboard as DashboardView,
-  Profile as ProfileView,
-  User as UserView,
+  // Login as LoginView,
+  // Dashboard as DashboardView,
+  // Profile as ProfileView,
+  // User as UserView,
+  Produk as ProdukView,
+  CreateProduk as CreateProdukView,
+  Detail as DetailView
 } from './views';
 
 const Routes = () => {
@@ -19,32 +22,55 @@ const Routes = () => {
       <Redirect
         exact
         from="/"
-        to="/dashboard"
+        to="/produk"
       />
       <RouteWithLayout
-        component={DashboardView}
+        component={ProdukView}
         exact
         layout={MainLayout}
-        path="/dashboard"
+        path="/produk"
       />
       <RouteWithLayout
-        component={ProfileView}
+        component={DetailView}
         exact
         layout={MainLayout}
-        path="/profile"
+        path="/produk/:id"
       />
       <RouteWithLayout
-        component={UserView}
+        component={CreateProdukView}
         exact
         layout={MainLayout}
-        path="/user"
+        path="/create-produk"
       />
-      <Route
-        component={LoginView}
-        exact
-        // layout={Login}
-        path="/sign-in"
-      />
+      {/*<Redirect*/}
+      {/*  exact*/}
+      {/*  from="/"*/}
+      {/*  to="/dashboard"*/}
+      {/*/>*/}
+      {/*<RouteWithLayout*/}
+      {/*  component={DashboardView}*/}
+      {/*  exact*/}
+      {/*  layout={MainLayout}*/}
+      {/*  path="/dashboard"*/}
+      {/*/>*/}
+      {/*<RouteWithLayout*/}
+      {/*  component={ProfileView}*/}
+      {/*  exact*/}
+      {/*  layout={MainLayout}*/}
+      {/*  path="/profile"*/}
+      {/*/>*/}
+      {/*<RouteWithLayout*/}
+      {/*  component={UserView}*/}
+      {/*  exact*/}
+      {/*  layout={MainLayout}*/}
+      {/*  path="/user"*/}
+      {/*/>*/}
+      {/*<Route*/}
+      {/*  component={LoginView}*/}
+      {/*  exact*/}
+      {/*  // layout={Login}*/}
+      {/*  path="/sign-in"*/}
+      {/*/>*/}
       <Redirect to="/not-found" />
     </Switch>
   );

@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme=>({
   }
 }))
 
-const User = props => {
+const Produk = props => {
   const {user,index,from} = props;
   const classes = useStyles();
   return (
@@ -31,12 +31,12 @@ const User = props => {
           {user.phone}
         </TableCell>
         <TableCell align="right">
-          <Tooltip title="Edit User">
+          <Tooltip title="Edit Produk">
             <IconButton aria-label="edit" onClick={props.edited}>
               <EditIcon className={classes.btnEdit}/>
             </IconButton>
           </Tooltip>
-          <Tooltip title="User Akses">
+          <Tooltip title="Produk Akses">
             <IconButton aria-label="user-akses" onClick={props.accessed}>
               <EditIcon className={classes.btnWarning}/>
             </IconButton>
@@ -47,4 +47,4 @@ const User = props => {
   );
 };
 
-export default User;
+export default Produk;

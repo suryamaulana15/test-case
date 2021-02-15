@@ -10,23 +10,50 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserAkses/UserAkses.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserAkses/index.jsx" afterDir="false" />
+    <list default="true" id="572d651a-f853-4524-8e4a-b5454cf8110b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/product.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/product.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/Produk.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/AddVariant/AddVariant.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/AddVariant/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/AddVariantTable/AddVariantTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/AddVariantTable/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/Detail/Detail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/Detail/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/List/List.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/List/Product/Product.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/List/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/ListVariant/ListVariant.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/ListVariant/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/Store/Store.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/Store/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/Update/Update.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/Update/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UpdateProduct/UpdateProduct.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UpdateProduct/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UpdateVariantTable/UpdateVariantTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UpdateVariantTable/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UserAkses/FormUserAkses/FormUserAkses.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UserAkses/UserAkses.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/UserAkses/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Produk/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RouteWithLayout/RouteWithLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouteWithLayout/RouteWithLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/user.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/user.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/User.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/List/List.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/List/User/User.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/User/components/Store/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/Store/Store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/User/components/Update/Update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/Update/Update.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/User/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +63,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1kMArEaldCn8N3djwnOEjM147J8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1oKNJ9ZV9dBwYVBPZt44f7P1mal" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,67 +72,32 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/Produk/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views/User/components" />
-      <recent name="$PROJECT_DIR$/src/components/UI" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/assets/images/logo" />
+      <recent name="$PROJECT_DIR$/src/views/Produk/components" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/views" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/hoc/Layout" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="profile.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/store/actions/profile.jsx" working-dir="$PROJECT_DIR$/src/store/actions">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.profile.jsx" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="30cee093-9620-40d9-8dbd-796cd2dd6b2e" name="Default Changelist" comment="" />
-      <created>1605500284049</created>
+      <changelist id="572d651a-f853-4524-8e4a-b5454cf8110b" name="Default Changelist" comment="" />
+      <created>1613031248007</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605500284049</updated>
-      <workItem from="1605500285303" duration="15026000" />
-      <workItem from="1605539162110" duration="2395000" />
-      <workItem from="1605580793812" duration="2690000" />
-      <workItem from="1605584744655" duration="5741000" />
-      <workItem from="1605597755187" duration="4219000" />
-      <workItem from="1605665404687" duration="3361000" />
-      <workItem from="1605672156862" duration="4724000" />
-      <workItem from="1605682962989" duration="8611000" />
-      <workItem from="1605711296664" duration="8340000" />
-      <workItem from="1605747005236" duration="6684000" />
-      <workItem from="1605766309012" duration="1370000" />
-      <workItem from="1606325960378" duration="556000" />
-      <workItem from="1606353045028" duration="1087000" />
-      <workItem from="1606359766533" duration="4499000" />
-      <workItem from="1606447864194" duration="2748000" />
-      <workItem from="1606458175058" duration="1469000" />
-      <workItem from="1606716737927" duration="11164000" />
-      <workItem from="1606797528900" duration="6569000" />
-      <workItem from="1606887883081" duration="6668000" />
-      <workItem from="1606961826638" duration="624000" />
-      <workItem from="1606969427678" duration="7607000" />
-      <workItem from="1607051851950" duration="6092000" />
-      <workItem from="1607148889521" duration="190000" />
-      <workItem from="1607150796232" duration="24000" />
-      <workItem from="1607586915678" duration="312000" />
-      <workItem from="1607655720486" duration="1571000" />
+      <updated>1613031248007</updated>
+      <workItem from="1613031249090" duration="7766000" />
+      <workItem from="1613092047041" duration="3618000" />
+      <workItem from="1613110696267" duration="453000" />
+      <workItem from="1613124342130" duration="2674000" />
+      <workItem from="1613267612926" duration="14283000" />
+      <workItem from="1613350004673" duration="10557000" />
     </task>
     <servers />
   </component>
@@ -125,39 +115,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="354" y="135" key="#Inspections" timestamp="1605667332818">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="354" y="135" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1605667332818" />
-    <state x="452" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605513150931">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="452" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605513150931" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1605677173678">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605677173678" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1605677173675">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605677173675" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1605677173673">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605677173673" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1605677173676">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605677173676" />
-    <state x="421" y="82" width="598" height="735" key="find.popup" timestamp="1605675410883">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="421" y="82" width="598" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605675410883" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1606987442918">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606987442918" />
   </component>
 </project>

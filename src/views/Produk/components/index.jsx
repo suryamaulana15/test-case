@@ -1,0 +1,10 @@
+export {default as List} from './List';
+export {default as Store} from './Store';
+export {default as AddVariant} from './AddVariant';
+export {default as ListVariant} from './ListVariant';
+export {default as Detail} from './Detail';
+export {default as AddVariantTable} from './AddVariantTable';
+export {default as UpdateVariantTable} from './UpdateVariantTable';
+export {default as UpdateProduct} from './UpdateProduct';
+// export {default as Update} from './Update';
+// export {default as UserAkses} from './UserAkses';

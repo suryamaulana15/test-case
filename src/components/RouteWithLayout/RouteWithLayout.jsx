@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 const RouteWithLayout = props => {
   const { layout: Layout, component: Component, ...rest } = props;
@@ -10,14 +10,14 @@ const RouteWithLayout = props => {
     <Route
       {...rest}
       render={matchProps => (
-        access_token ?
+        // access_token ?
         <Layout>
           <Component {...matchProps} />
         </Layout>
-        : (
-          <Redirect to="/sign-in"
-          />
-        )
+        // : (
+        //   <Redirect to="/sign-in"
+        //   />
+        // )
       )}
     />
   );

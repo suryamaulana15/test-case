@@ -22,3 +22,17 @@ export {
   updateUserAkses,
   clearErrorUser
 } from './user';
+
+export  {
+  fetchProducts,
+  addVariant,
+  deleteVariant,
+  clearVariant,
+  storeProduct,
+  deleteProduct,
+  showProduct,
+  deleteVariantData,
+  storeVariant,
+  updateVariant,
+  updateProduct
+} from  './product'
