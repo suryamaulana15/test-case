@@ -15,10 +15,11 @@ const schema = yup.object().shape({
 const useStyles = makeStyles(theme => ({
 
   btnTextPrimary: {
-    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.white,
     textTransform: 'none',
     '&:hover': {
-      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.dark,
     },
   },
   buttonDelete: {
@@ -110,7 +111,7 @@ const UpdateProduct = props => {
                   <Grid item lg={4} md={4} sm={12} xs={12}>
                     <Grid container spacing={2}>
                       <Grid item lg={6} md={6} sm={12} xs={12}>
-                        <Button variant="text" fullWidth >
+                        <Button variant="text" fullWidth onClick={props.closedModalDialog}>
                           Batal
                         </Button>
                       </Grid>

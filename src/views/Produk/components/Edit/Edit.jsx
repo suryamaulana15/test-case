@@ -43,12 +43,20 @@ const useStyles = makeStyles(theme=> ({
   }
 }))
 
-const Detail = props => {
-  const classes = useStyles();
+const columns = [
+  { id: 'nomor', label: 'NO' },
+  { id: 'name', label: 'Nama' },
+  { id: 'email', label: 'Deskripsi' },
+  { id: 'action', label: 'Action', align: 'center' }
+]
 
-  const {onShowProduk, detail_product, loading,changing} = props;
+const Edit = props => {
+  const classes = useStyles();
+  // const {products, loading, onFetchProducts,changing} = props;
+  const {onShowProduk, detail_product, loading,changing,onDeleteVariant} = props;
   const {id} = useParams();
   useEffect(()=> {
+    // onClearUserAkses()
     closedModalDialog();
     onShowProduk(id);
   },[onShowProduk,changing]);
@@ -102,6 +110,10 @@ const Detail = props => {
                     </tr>
                   </table>
                 </div>
+                <div>
+                  <Button variant={"contained"} className={classes.btnWarning} size={"medium"} fullWidth onClick={() => updateVariant(varian)}>Edit Varian</Button>
+                  <Button variant={"contained"} className={classes.btnDanger} size={"medium"} fullWidth onClick={() => onDeleteVariant(varian.id, detail_product.id)}>Hapus Varian</Button>
+                </div>
               </CardContent>
             </Card>
           </Grid>
@@ -126,6 +138,33 @@ const Detail = props => {
     setForm('');
   }
 
+  const addVariant = () => {
+    setModalState({
+      open: true,
+      title: 'Tambah Variant',
+      maxWidth: 'sm'
+    });
+    setForm(<AddVariantTable id_produk={detail_product.id} closedModalDialog={closedModalDialog}/>)
+  }
+
+  const updateVariant = (varian) => {
+    setModalState({
+      open: true,
+      title: 'Edit Variant',
+      maxWidth: 'sm'
+    });
+    setForm(<UpdateVariantTable varian={varian} closedModalDialog={closedModalDialog}/>);
+  }
+
+  const updateProduct = (produk) => {
+    setModalState({
+      open: true,
+      title: 'Edit Produk',
+      maxWidth: 'sm'
+    });
+    setForm(<UpdateProduct produk={produk} closedModalDialog={closedModalDialog}/>);
+  }
+
   return (loading ? <Loading/> :
     <Fragment>
       <Modal
@@ -138,7 +177,17 @@ const Detail = props => {
 
       <Grid container justify={"space-between"}>
         <Grid item>
-          Detail Produk
+          Edit Produk
+        </Grid>
+        <Grid item >
+          <Grid container spacing={2}>
+            <Grid item>
+              <Button variant={"contained"} className={classes.btnWarning} onClick={() => updateProduct(detail_product)}>Edit Produk</Button>
+            </Grid>
+            <Grid item>
+              <Button variant={"contained"} color={"primary"} onClick={() => addVariant()}>Tambah Varian</Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
       <br/>
@@ -203,4 +252,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Detail);
+export default connect(mapStateToProps,mapDispatchToProps)(Edit);

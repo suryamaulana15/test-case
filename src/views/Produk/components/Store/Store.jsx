@@ -4,7 +4,10 @@ import * as actions from '../../../../store/actions';
 import {
   AddVariant,
   ListVariant,
-} from '../../components'
+} from '../../components';
+import {
+  Loading
+} from '../../../../components/UI';
 import {connect} from "react-redux";
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
@@ -41,7 +44,7 @@ const Store = props => {
 
   const history = useHistory();
 
-  const {varian,onClearVariant,changingVariant,onStoreProduct} = props;
+  const {varian,onClearVariant,changingVariant,onStoreProduct,loading} = props;
   const classes = useStyles();
 
   useEffect(() => {
@@ -79,7 +82,7 @@ const Store = props => {
       title: 'Tambah Variant',
       maxWidth: 'sm'
     });
-    setForm(<AddVariant/>)
+    setForm(<AddVariant closedModalDialog={() => closedModalDialog()}/>)
   }
 
   // console.log(errors);
@@ -122,7 +125,7 @@ const Store = props => {
   )
 
 
-  return (
+  return (loading ? <Loading/> :
     <Fragment>
       <Modal
         maxWidth={modalState.maxWidth}
@@ -131,6 +134,12 @@ const Store = props => {
         onCloseModal={closedModalDialog}
         contentModal={form}
       />
+      <Grid container justify={"space-between"}>
+        <Grid item>
+          Tambah Produk
+        </Grid>
+      </Grid>
+      <br/>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Card>
           <CardContent>
@@ -206,7 +215,7 @@ const Store = props => {
 const mapStateToProps = state => {
   return {
     // errors: state.user.error,
-    // loading: state.user.loading,
+    loading: state.product.loading,
     varian: state.product.product_variant,
     changingVariant: state.product.changingVariant
   }

@@ -40,11 +40,13 @@ const Product = props => {
             </IconButton>
           </Tooltip>
           </NavLink>
+          <NavLink to={"produk/" +product.id+ "/edit"} >
           <Tooltip title="Edit Produk">
             <IconButton aria-label="edit" onClick={props.edited}>
               <EditIcon className={classes.btnEdit}/>
             </IconButton>
           </Tooltip>
+          </NavLink>
           <Tooltip title="Delete Produk">
             <IconButton aria-label="user-akses" onClick={props.deleted}>
               <DeleteIcon className={classes.btnDelete}/>

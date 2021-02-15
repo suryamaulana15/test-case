@@ -105,16 +105,13 @@ const Produk = props => {
 
 const mapStateToProps = state => {
   return {
-    // currentPage: state.user.user.currentPage,
-    // changing: state.user.changing,
-    // updateChanging: state.user.updateChanging,
-    // loading: state.user.loading
+
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    // onGetUserAkses : (id, token) => dispatch(actions.getUserAkses(id, token)),
+
   }
 }
 

@@ -191,39 +191,10 @@ const SideBarComponent = props => {
               <ListItemIcon>
                 <DashboardIcon style={{ color: textMenuWhite }} />
               </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Product</Typography>} />
+              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Produk</Typography>} />
             </ListItem>
           </Button>
 
-          {/*<Button*/}
-          {/*  activeclassname={classes.active}*/}
-          {/*  className={classes.button}*/}
-          {/*  component={CustomRouterLink}*/}
-          {/*  to='/user'*/}
-          {/*  onClick={props.closed}*/}
-          {/*>*/}
-          {/*  <ListItem button key='user'>*/}
-          {/*    <ListItemIcon>*/}
-          {/*      <RecentActorsSharpIcon style={{ color: textMenuWhite }} />*/}
-          {/*    </ListItemIcon>*/}
-          {/*    <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>User</Typography>} />*/}
-          {/*  </ListItem>*/}
-          {/*</Button>*/}
-
-          {/*<Button*/}
-          {/*  className={classes.button}*/}
-          {/*  component={CustomRouterLink}*/}
-          {/*  // to='/logout'*/}
-          {/*  // onClick={props.closed}*/}
-          {/*  onClick={handlingSignout}*/}
-          {/*>*/}
-          {/*  <ListItem button key='signout'>*/}
-          {/*    <ListItemIcon>*/}
-          {/*      <SignOutIcon style={{ color: textMenuWhite }} />*/}
-          {/*    </ListItemIcon>*/}
-          {/*    <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Sign Out</Typography>} />*/}
-          {/*  </ListItem>*/}
-          {/*</Button>*/}
            </NavLink>
         </List>
       </SwipeableDrawer>

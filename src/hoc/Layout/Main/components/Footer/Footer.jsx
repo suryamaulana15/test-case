@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
-import { Typography, Link } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,18 +22,10 @@ const Footer = props => {
     >
       <Typography variant="body1">
         &copy;{' '}
-        <Link
-          component="a"
-          href="https://eoaclub.id/"
-          target="_blank"
-        >
-          EOA Tech Team
-        </Link>
+
+          TOKO SURYA MAKMUR
         . 2020
       </Typography>
-      {/* <Typography variant="caption">
-        Crafted with love for Peradaban EOA.
-      </Typography> */}
     </div>
   )
 }

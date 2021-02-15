@@ -12,7 +12,8 @@ import {
   // User as UserView,
   Produk as ProdukView,
   CreateProduk as CreateProdukView,
-  Detail as DetailView
+  Detail as DetailView,
+  Edit as EditView,
 } from './views';
 
 const Routes = () => {
@@ -29,6 +30,12 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/produk"
+      />
+      <RouteWithLayout
+        component={EditView}
+        exact
+        layout={MainLayout}
+        path="/produk/:id/edit"
       />
       <RouteWithLayout
         component={DetailView}

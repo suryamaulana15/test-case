@@ -1,7 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios-orders';
 import { setAlert } from './alert';
-import {storeUserFail, storeUserStart, storeUserSuccess} from "./user";
 
 export const fetchProductsStart = () => {
   return {
@@ -24,7 +23,7 @@ export const fetchProductsSuccess = (products, current_page, per_page, total, fr
 
 export const fetchProductsFail = (error) => {
   return {
-    type: actionTypes.FETCH_PROFILE_FAIL,
+    type: actionTypes.FETCH_PRODUCTS_FAIL,
     error: error
   }
 }
@@ -255,10 +254,20 @@ export const storeVariantFail = (error) => {
 export const storeVariant = (id_produk, storeData) => {
   return dispatch => {
     dispatch(storeVariantStart());
-    axios.post('varian/produk/' +id_produk, storeData, {
+    const bodyFormData = new FormData()
+    bodyFormData.set('nama', storeData.nama)
+    bodyFormData.set('harga', storeData.harga)
+    bodyFormData.set('ukuran', storeData.ukuran)
+    bodyFormData.set('diskon[persentasi]', storeData.diskon.persentasi)
+    bodyFormData.set('foto', storeData.foto)
+    console.log(bodyFormData);
+    axios({
+      method: 'post',
+      url: 'varian/produk/' +id_produk,
+      data: bodyFormData,
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
       }
     })
       .then(res => {
@@ -295,10 +304,23 @@ export const updateVariantFail = (error) => {
 export const updateVariant = (id, storeData, id_produk) => {
   return dispatch => {
     dispatch(updateVariantStart());
-    axios.patch('varian/' +id, storeData, {
+    const bodyFormData = new FormData()
+    bodyFormData.set('nama', storeData.nama)
+    bodyFormData.set('harga', storeData.harga)
+    bodyFormData.set('ukuran', storeData.ukuran)
+    bodyFormData.set('diskon[persentasi]', storeData.diskon.persentasi)
+    bodyFormData.set('_method', 'patch')
+    if(storeData.foto !== ""){
+      bodyFormData.set('foto', storeData.foto)
+    }
+    console.log(bodyFormData)
+    axios({
+      method: 'post',
+      url: 'varian/' +id,
+      data: bodyFormData,
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
       }
     })
       .then(res => {

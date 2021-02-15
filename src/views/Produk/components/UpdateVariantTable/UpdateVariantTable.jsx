@@ -6,20 +6,23 @@ import { useForm } from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as actions from '../../../../store/actions';
 import {connect} from "react-redux";
+import {Dropzone} from "../../../../components/UI";
 
 const schema = yup.object().shape({
   nama: yup.string().required(),
   harga: yup.number().required(),
   persentasi: yup.number().required(),
+  ukuran: yup.string().required(),
 });
 
 const useStyles = makeStyles(theme => ({
 
   btnTextPrimary: {
-    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.white,
     textTransform: 'none',
     '&:hover': {
-      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.dark,
     },
   },
   buttonDelete: {
@@ -40,6 +43,7 @@ const UpdateVariantTable = props => {
     nama: varian.nama,
     harga: varian.harga,
     persentasi: varian.diskon.persentasi,
+    ukuran: varian.ukuran,
   });
 
   const handleChange = (event) => {
@@ -67,10 +71,17 @@ const UpdateVariantTable = props => {
     let obj = {};
     obj.nama = data.nama;
     obj.harga = data.harga;
+    obj.ukuran = data.ukuran;
     obj.diskon = {
       persentasi: data.persentasi
     };
+    obj.foto = image;
     onUpdateVariant(varian.id,obj, varian.id_produk)
+  }
+
+  const [image, setImage] = useState('');
+  const handleChangeBanner = event => {
+    setImage(event[0])
   }
 
   return (
@@ -127,6 +138,32 @@ const UpdateVariantTable = props => {
                 />
               </Grid>
             </Grid>
+            <Grid container spacing={2}>
+              <Grid item lg={12} md={12} sm={12} xs={12}>
+                <TextField
+                  label="Ukuran"
+                  variant="standard"
+                  name="ukuran"
+                  multiline
+                  fullWidth
+                  defaultValue={formState.ukuran}
+                  onChange={handleChange}
+                  inputRef={register}
+                  error={!!errors.ukuran}
+                  helperText={errors.ukuran && errors.ukuran.message}
+                />
+              </Grid>
+            </Grid>
+            <Grid container spacing={2}>
+              <Grid item lg={12} md={12} sm={12} xs={12}>
+                <Dropzone multiple={false} fileType={'image/*'} value={image} handleChangeBanner={handleChangeBanner} />
+              </Grid>
+            </Grid>
+            <Grid container spacing={2}>
+              <Grid item lg={12} md={12} sm={12} xs={12}>
+                {/*<img src={varian.foto} width="100%" height={"320px"} alt={"images"}/>*/}
+              </Grid>
+            </Grid>
             <br/><br/>
             <Grid container spacing={2}>
               <Grid item lg={12} md={12} sm={12} xs={12}>
@@ -137,14 +174,14 @@ const UpdateVariantTable = props => {
                   <Grid item lg={4} md={4} sm={12} xs={12}>
                     <Grid container spacing={2}>
                       <Grid item lg={6} md={6} sm={12} xs={12}>
-                        <Button variant="text" fullWidth >
+                        <Button variant="text" fullWidth onClick={props.closedModalDialog}>
                           Batal
                         </Button>
                       </Grid>
                       <Grid item lg={6} md={6} sm={12} xs={12}>
-                        <Button type={"submit"} variant="text" fullWidth className={classes.btnTextPrimary}>
+                        {<Button type={"submit"} variant="text" fullWidth className={classes.btnTextPrimary}>
                           Simpan
-                        </Button>
+                        </Button>}
                       </Grid>
                     </Grid>
                   </Grid>

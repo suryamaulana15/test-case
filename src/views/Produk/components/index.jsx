@@ -6,5 +6,6 @@ export {default as Detail} from './Detail';
 export {default as AddVariantTable} from './AddVariantTable';
 export {default as UpdateVariantTable} from './UpdateVariantTable';
 export {default as UpdateProduct} from './UpdateProduct';
+export {default as Edit} from './Edit';
 // export {default as Update} from './Update';
 // export {default as UserAkses} from './UserAkses';

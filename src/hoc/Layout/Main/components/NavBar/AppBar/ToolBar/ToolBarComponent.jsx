@@ -15,8 +15,11 @@ const iconBlack = '#000000'
 
 const useStyles = makeStyles(theme => ({
   root: {
-
     display: 'flex'
+  },
+  fontLogo: {
+    fontWeight: "bold",
+    fontSize: "larger"
   },
   content: {
     flexGrow: 1,
@@ -138,8 +141,9 @@ const ToolBarComponent = props => {
         >
           <MenuIcon />
         </IconButton>
-        <div>
-          <img src={require('../../../../../../../assets/images/logo/logo-manajemen-aset.png').default} alt="logo" width="150px" height="auto"/>
+        <div className={classes.fontLogo}>
+          {/*<img src={require('../../../../../../../assets/images/logo/logo-manajemen-aset.png').default} alt="logo" width="150px" height="auto"/>*/}
+          Toko Surya Makmur
         </div>
 
         {/* <RouterLink to="/">
@@ -198,12 +202,5 @@ const ToolBarComponent = props => {
     </Fragment>
   )
 }
-
-// const mapStateToProps = state => {
-//   return {
-//     unread_count: state.notification.unread_count > 0 ? 'new' : null,
-//     changing: state.notification.changing,
-//   }
-// }
 
 export default (ToolBarComponent)

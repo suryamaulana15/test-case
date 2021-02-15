@@ -15,6 +15,8 @@ const columns = [
   { id: 'nama', label: 'Nama' },
   { id: 'harga', label: 'Harga' },
   { id: 'diskon', label: 'Diskon' },
+  { id: 'diskon', label: 'Ukuran' },
+  { id: 'foto', label: 'Foto' },
   { id: 'aksi', label: 'Aksi'},
 ]
 
@@ -49,6 +51,12 @@ const ListVariant = props => {
                 </TableCell>
                 <TableCell>
                   {variant.diskon.persentasi} %
+                </TableCell>
+                <TableCell>
+                  {variant.ukuran}
+                </TableCell>
+                <TableCell>
+                  {variant.preview.path}
                 </TableCell>
                 <TableCell>
                   <Tooltip title="Hapus Variant">

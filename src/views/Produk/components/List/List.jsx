@@ -66,9 +66,6 @@ const List = props => {
               key={product.id}
               from={products.from}
               index={index}
-              // detailed={() => <Redirect to='/produk'+product.id />}
-            //   edited={() => props.edit(user)}
-            //   accessed={() => props.access(user.id)}
               deleted={() => {
                 props.onDeleteProduk(product.id)
               }}
