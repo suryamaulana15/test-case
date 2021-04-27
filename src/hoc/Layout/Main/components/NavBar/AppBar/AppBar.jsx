@@ -12,8 +12,11 @@ import AccountCircle from '@material-ui/icons/AccountCircle'
 import ToolBarComponent from './ToolBar/ToolBarComponent'
 import { Link, NavLink } from 'react-router-dom'
 // import Notifications from './ToolBar/Notifications/Notifications'
-// import * as actions from '../../../../../store/actions/index';
-// import { connect } from 'react-redux'
+import * as actions from '../../../../../../store/actions';
+import { connect } from 'react-redux'
+import {Typography} from "@material-ui/core";
+import moment from "moment";
+
 const drawerWidth = 240
 const appDrawerBlue = '#011747'
 // const appDrawerDefault = '#FFFFFF';
@@ -124,7 +127,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const Appbar = props => {
-  const { open } = props
+  const { open,onSignOut } = props
 
   const classes = useStyles()
   // const theme = useTheme();
@@ -150,6 +153,11 @@ const Appbar = props => {
     setMobileMoreAnchorEl(event.currentTarget)
   }
 
+  const signOut = () => {
+    handleMenuClose();
+    onSignOut();
+  }
+
   const menuId = 'primary-search-account-menu'
   const renderMenu = (
     <Menu
@@ -161,11 +169,17 @@ const Appbar = props => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <NavLink to="/profile" style={{ textDecoration: 'none', color: 'inherit' }}>
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      </NavLink>
-      <NavLink to="/logout" style={{ textDecoration: 'none', color: 'inherit' }}>
-        <MenuItem onClick={handleMenuClose}>Sign Out</MenuItem>
+      <box>
+        <Typography variant={"body2"}> User Name</Typography>
+        <Typography variant={"body1"}> {sessionStorage.getItem('username')} </Typography>
+        <Typography variant={"body2"}> Name</Typography>
+        <Typography variant={"body1"}> {sessionStorage.getItem('name')} </Typography>
+        <Typography variant={"body2"}> Last Login</Typography>
+        <Typography variant={"body1"}> {moment(moment(sessionStorage.getItem('last_login')).toDate()).format('YYYY-MM-DD HH:mm:ss')} </Typography>
+      </box>
+
+      <NavLink to="/#" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <MenuItem onClick={signOut}>Sign Out</MenuItem>
       </NavLink>
       
     </Menu>
@@ -228,4 +242,11 @@ const Appbar = props => {
   )
 }
 
-export default Appbar;
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    onSignOut: () => dispatch(actions.logout())
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(Appbar);

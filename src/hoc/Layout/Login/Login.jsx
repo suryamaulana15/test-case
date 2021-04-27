@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const SignInSchema = yup.object().shape({
-  email: yup.string().required("Email harus diisi"),
+  username: yup.string().required("username harus diisi"),
 	password: yup.string().required("Password harus diisi"),
 });
 
@@ -101,7 +101,7 @@ const Login =  props => {
 	const onSubmit = event => {
 		console.log(event);
 		// addLogin(event, history)
-		props.onAuth(event.email, event.password, history)
+		props.onAuth(event, history)
 		// console.log(event);
 	}
 
@@ -127,14 +127,14 @@ const Login =  props => {
 										variant="outlined"
 										margin="normal"
 										fullWidth
-										id="email"
-										label="Email Address"
-										name="email"
-										autoComplete="email"
+										id="username"
+										label="Username"
+										name="username"
+										// autoComplete="username"
 										autoFocus
 										inputRef={register}
-										error={!!errors.email}
-										helperText={errors.email && errors.email.message}
+										error={!!errors.username}
+										helperText={errors.username && errors.username.message}
 										// className={classes.textField}
 									/>
 									<TextField
@@ -182,7 +182,7 @@ const Login =  props => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAuth: (email, password, history) => dispatch(actions.auth(email, password, history)),
+    onAuth: (storeData, history) => dispatch(actions.signIn(storeData, history)),
     // onAlert: (message, alertType) => dispatch(actions.setAlert(message, alertType))
   }
 }

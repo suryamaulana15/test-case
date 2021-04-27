@@ -179,24 +179,42 @@ const SideBarComponent = props => {
         <List
           className={classes.menus}
         >
-           <NavLink to="/produk">
+           <NavLink to="/dashboard">
           <Button
             activeclassname={classes.active}
             className={classes.button}
             component={CustomRouterLink}
-            to='/produk'
+            to='/dashboard'
             onClick={props.closed}
           >
             <ListItem button key='product'>
               <ListItemIcon>
                 <DashboardIcon style={{ color: textMenuWhite }} />
               </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>Produk</Typography>} />
+              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>dashboard</Typography>} />
             </ListItem>
           </Button>
 
            </NavLink>
         </List>
+
+        <NavLink to="/finance">
+            <Button
+              activeclassname={classes.active}
+              className={classes.button}
+              component={CustomRouterLink}
+              to='/finance'
+              onClick={props.closed}
+            >
+              <ListItem button key='product'>
+                <ListItemIcon>
+                  <DashboardIcon style={{ color: textMenuWhite }} />
+                </ListItemIcon>
+                <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>finance</Typography>} />
+              </ListItem>
+            </Button>
+
+          </NavLink>
       </SwipeableDrawer>
       <Dialog
         open={dialogOpen}

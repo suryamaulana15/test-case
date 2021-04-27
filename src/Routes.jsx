@@ -3,11 +3,13 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 
 import RouteWithLayout from './components/RouteWithLayout/RouteWithLayout';
 import MainLayout from './hoc/Layout/Main/Main';
+import Login from './hoc/Layout/Login';
 
 
 import {
   // Login as LoginView,
-  // Dashboard as DashboardView,
+  Dashboard as DashboardView,
+  Finance as FinanceView,
   // Profile as ProfileView,
   // User as UserView,
   Produk as ProdukView,
@@ -23,7 +25,7 @@ const Routes = () => {
       <Redirect
         exact
         from="/"
-        to="/produk"
+        to="/sign-in"
       />
       <RouteWithLayout
         component={ProdukView}
@@ -54,12 +56,18 @@ const Routes = () => {
       {/*  from="/"*/}
       {/*  to="/dashboard"*/}
       {/*/>*/}
-      {/*<RouteWithLayout*/}
-      {/*  component={DashboardView}*/}
-      {/*  exact*/}
-      {/*  layout={MainLayout}*/}
-      {/*  path="/dashboard"*/}
-      {/*/>*/}
+      <RouteWithLayout
+        component={DashboardView}
+        exact
+        layout={MainLayout}
+        path="/dashboard"
+      />
+      <RouteWithLayout
+        component={FinanceView}
+        exact
+        layout={MainLayout}
+        path="/finance"
+      />
       {/*<RouteWithLayout*/}
       {/*  component={ProfileView}*/}
       {/*  exact*/}
@@ -72,12 +80,12 @@ const Routes = () => {
       {/*  layout={MainLayout}*/}
       {/*  path="/user"*/}
       {/*/>*/}
-      {/*<Route*/}
-      {/*  component={LoginView}*/}
-      {/*  exact*/}
-      {/*  // layout={Login}*/}
-      {/*  path="/sign-in"*/}
-      {/*/>*/}
+      <Route
+        component={Login}
+        exact
+        // layout={Login}
+        path="/sign-in"
+      />
       <Redirect to="/not-found" />
     </Switch>
   );

@@ -1,23 +1,22 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route,Redirect } from 'react-router-dom';
 
 const RouteWithLayout = props => {
   const { layout: Layout, component: Component, ...rest } = props;
 
-  const access_token = sessionStorage.getItem('access_token');
+  const access_token = sessionStorage.getItem('token');
 
   return (
     <Route
       {...rest}
       render={matchProps => (
-        // access_token ?
+        access_token ?
         <Layout>
           <Component {...matchProps} />
         </Layout>
-        // : (
-        //   <Redirect to="/sign-in"
-        //   />
-        // )
+        : (
+          <Redirect to="/sign-in" />
+        )
       )}
     />
   );

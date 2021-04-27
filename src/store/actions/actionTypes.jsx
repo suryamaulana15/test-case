@@ -29,3 +29,9 @@ export const UPDATE_PRODUCT_FAIL = 'UPDATE_PRODUCT_FAIL';
 export const ADD_VARIANT = 'ADD_VARIANT';
 export const DELETE_VARIANT = 'DELETE_VARIANT';
 export const CLEAR_VARIANT = 'CLEAR_VARIANT';
+
+export const SIGNIN_START = 'SIGNIN_START';
+export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS';
+export const SIGNIN_FAIL = 'SIGNIN_FAIL';
+
+export const SIGNOUT = 'SIGNOUT';

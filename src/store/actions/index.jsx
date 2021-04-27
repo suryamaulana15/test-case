@@ -16,3 +16,8 @@ export  {
   updateVariant,
   updateProduct
 } from  './product'
+
+export {
+  signIn,
+  logout
+} from './auth';
