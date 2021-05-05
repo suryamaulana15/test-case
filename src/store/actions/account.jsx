@@ -85,3 +85,44 @@ export const getCountAccount = () => {
       });
   }
 }
+
+export const storeAccountStart = () => {
+  return {
+    type: actionTypes.STORE_ACCOUNT_START
+  };
+};
+
+export const storeAccountSuccess = () => {
+  return {
+    type: actionTypes.STORE_ACCOUNT_SUCCESS
+  };
+};
+
+export const storeAccountFail = (error) => {
+  return {
+    type: actionTypes.STORE_ACCOUNT_FAIL,
+    error: error
+  };
+};
+
+export const storeAccount = (storeData) => {
+  return dispatch => {
+    dispatch(storeAccountStart());
+    axios.post('api/v1/finance-accounts', storeData,{
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`
+      }
+    })
+      .then(response => {
+        dispatch(storeAccountSuccess())
+        dispatch(setAlert('success input account', "success"))
+      })
+      .catch(err => {
+        dispatch(storeAccountFail(err.response.data.error.message))
+        dispatch(setAlert(err.response.data.error.message, "error"))
+        console.log(err)
+      });
+  }
+}

@@ -11,7 +11,7 @@ import {connect} from "react-redux";
 import * as actions from '../../../../../../store/actions';
 import {TableBodyComponents} from './Components'
 import {FormControl, Grid, TableHead, InputBase} from "@material-ui/core";
-import {AddCircle, Search} from "@material-ui/icons";
+import {Search} from "@material-ui/icons";
 import {isEmpty} from '../../../../../../shared/utility';
 import {Loading, TablePaginationActions} from '../../../../../../components/UI'
 
@@ -58,7 +58,7 @@ const columns = [
 const List = props => {
 
   const {
-    onFetchAccount,currentPage, accounts, counting, loading
+    onFetchAccount,currentPage, accounts, counting, loading, changing
   } = props;
 
   const [formSearch, setFormSearch] = useState({
@@ -77,7 +77,7 @@ const List = props => {
     }, 1000)
 
     return () => clearTimeout(timer)
-  },[onFetchAccount,formSearch])
+  },[onFetchAccount,formSearch, changing])
 
   const handleSearch = event => {
     const target = event.target.name;
@@ -289,7 +289,8 @@ const mapStateToProps = (state) => {
     currentPage: state.account.page,
     counting: state.account.count,
     accounts: state.account.account.data,
-    loading: state.account.loading
+    loading: state.account.loading,
+    changing: state.account.changing
   };
 };
 

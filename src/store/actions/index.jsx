@@ -10,5 +10,6 @@ export {
 
 export {
   fetchAccoutnts,
-  getCountAccount
+  getCountAccount,
+  storeAccount
 } from './account'

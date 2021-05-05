@@ -7,6 +7,7 @@ const initialState = {
   count: 0,
   error: {},
   loading: false,
+  changing: 0,
 }
 
 const fetchAccountStart = (state, action) => {
@@ -40,20 +41,41 @@ const getCountAccountFail = (state, action) => {
   return updateObject(state, { error: action.error, loading: false })
 }
 
+const storeAccountStart = (state, action) => {
+  return updateObject(state, { error: {}, loading: true })
+}
+
+const storeAccountSuccess = (state, action) => {
+  return updateObject(state, {
+    changing: state.changing+1,
+    loading: false
+  })
+}
+
+const storeAccountFail = (state, action) => {
+  return updateObject(state, { error: action.error, loading: false })
+}
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_ACCOUNTS_START:
-      return fetchAccountStart(state, action)
+      return fetchAccountStart(state, action);
     case actionTypes.FETCH_ACCOUNTS_SUCCESS:
-      return fetchAccountSuccess(state, action)
+      return fetchAccountSuccess(state, action);
     case actionTypes.FETCH_ACCOUNTS_FAIL:
-      return fetchAccountFail(state, action)
+      return fetchAccountFail(state, action);
     case actionTypes.GET_COUNT_ACCOUNT_START:
-      return getCountAccountStart(state, action)
+      return getCountAccountStart(state, action);
     case actionTypes.GET_COUNT_ACCOUNT_SUCCESS:
-      return getCountAccountSuccess(state, action)
+      return getCountAccountSuccess(state, action);
     case actionTypes.GET_COUNT_ACCOUNT_FAIL:
-      return getCountAccountFail(state, action)
+      return getCountAccountFail(state, action);
+    case actionTypes.STORE_ACCOUNT_START:
+      return storeAccountStart(state, action);
+    case actionTypes.STORE_ACCOUNT_SUCCESS:
+      return storeAccountSuccess(state, action);
+    case actionTypes.STORE_ACCOUNT_FAIL:
+      return storeAccountFail(state, action);
     default: return state
   }
 }
