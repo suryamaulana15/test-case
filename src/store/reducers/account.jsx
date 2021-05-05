@@ -8,6 +8,7 @@ const initialState = {
   error: {},
   loading: false,
   changing: 0,
+  changingUpdate: 0,
 }
 
 const fetchAccountStart = (state, action) => {
@@ -56,6 +57,21 @@ const storeAccountFail = (state, action) => {
   return updateObject(state, { error: action.error, loading: false })
 }
 
+const updateAccountStart = (state, action) => {
+  return updateObject(state, { error: {}, loading: true })
+}
+
+const updateAccountSuccess = (state, action) => {
+  return updateObject(state, {
+    changingUpdate: state.changingUpdate+1,
+    loading: false
+  })
+}
+
+const updateAccountFail = (state, action) => {
+  return updateObject(state, { error: action.error, loading: false })
+}
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_ACCOUNTS_START:
@@ -76,6 +92,12 @@ const reducer = (state = initialState, action) => {
       return storeAccountSuccess(state, action);
     case actionTypes.STORE_ACCOUNT_FAIL:
       return storeAccountFail(state, action);
+    case actionTypes.UPDATE_ACCOUNT_START:
+      return updateAccountStart(state, action);
+    case actionTypes.UPDATE_ACCOUNT_SUCCESS:
+      return updateAccountSuccess(state, action);
+    case actionTypes.UPDATE_ACCOUNT_FAIL:
+      return updateAccountFail(state, action);
     default: return state
   }
 }

@@ -1,17 +1,15 @@
 import React, {useEffect, useState, Fragment} from "react";
-import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {Divider, Fab, IconButton, InputLabel, Select, TableBody, TableFooter, TablePagination} from '@material-ui/core';
+import {TableBody, TableFooter, TablePagination} from '@material-ui/core';
 import {connect} from "react-redux";
 import * as actions from '../../../../../../store/actions';
 import {TableBodyComponents} from './Components'
-import {FormControl, Grid, TableHead, InputBase} from "@material-ui/core";
-import {Search} from "@material-ui/icons";
+import {Grid, TableHead, InputBase} from "@material-ui/core";
 import {isEmpty} from '../../../../../../shared/utility';
 import {Loading, TablePaginationActions} from '../../../../../../components/UI'
 
@@ -58,18 +56,8 @@ const columns = [
 const List = props => {
 
   const {
-    onFetchAccount,currentPage, accounts, counting, loading, changing
+    onFetchAccount,currentPage, accounts, counting, loading, changing, formSearch
   } = props;
-
-  const [formSearch, setFormSearch] = useState({
-    sort_field: 'id',
-    sort_type: -1,
-    search: '',
-    search_type: 'name'
-  });
-
-  // const [search, setSearch] = useState("");
-  // const [searchType, setSearchType] = useState("name");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -78,15 +66,6 @@ const List = props => {
 
     return () => clearTimeout(timer)
   },[onFetchAccount,formSearch, changing])
-
-  const handleSearch = event => {
-    const target = event.target.name;
-    event.persist();
-    setFormSearch((formSearch) => ({
-      ...formSearch,
-      [target]: event.target.value
-    }));
-  };
 
   const handleChangePage = (event, newPage) => {
     onFetchAccount(newPage, formSearch)
@@ -109,7 +88,7 @@ const List = props => {
               account={account}
               key={account.id}
               // detailed={() => props.show(asset)}
-              // edited={() => props.edit(asset)}
+              edited={() => props.edit(account)}
               // deleted={() => {
               //   props.onCloseAlert()
               //   props.onDialogBox('Yakin ingin menghapus data Aset? ', asset, asset.uuid, actions.deleteAsetWakaf)
@@ -143,118 +122,7 @@ const List = props => {
   return ( loading ? <Loading/> :
     <Fragment>
       <br/>
-      <Grid container spacing={2}>
-        <Grid item xl={8} md={8} sm={12} xs={12}>
-          <Grid container spacing={2}>
-            <Grid item xl={6} md={6} sm={12} xs={12}>
-              <Paper component="form" className={classes.searchSelectRoot} fullWidth>
-                <FormControl
-                  // error={errorStatus.status && true}
-                  variant="outlined" className={classes.formControl} fullWidth>
-                  <InputLabel htmlFor="outlined-age-native-simple">Sort Field</InputLabel>
-                  <Select
-                    fullWidth
-                    native
-                    defaultValue={formSearch.sort_field}
-                    onChange={handleSearch}
-                    label="Search Type"
-                    inputProps={{
-                      name: 'searchType',
-                      id: 'outlined-age-native-simple'
-                    }}
-                    name="sort_field"
-                    // inputRef={register}
-                  >
-                    <option value="id">ID</option>
-                    <option value="name">Name</option>
-                  </Select>
-                  {/* <FormHelperText>{errorStatus.status && errorStatus.status[0]}</FormHelperText> */}
-                </FormControl>
-              </Paper>
-            </Grid>
-            <Grid item xl={6} md={6} sm={12} xs={12}>
-              <Paper component="form" className={classes.searchSelectRoot}>
-                <FormControl
-                  // error={errorStatus.status && true}
-                  variant="outlined" className={classes.formControl} fullWidth>
-                  <InputLabel htmlFor="outlined-age-native-simple">Sort Type</InputLabel>
-                  <Select
-                    fullWidth
-                    native
-                    defaultValue={formSearch.sort_type}
-                    onChange={handleSearch}
-                    label="Sort Type"
-                    inputProps={{
-                      name: 'sort_type',
-                      id: 'outlined-age-native-simple'
-                    }}
-                    name="sort_type"
-                    // inputRef={register}
-                  >
-                    <option value={-1}>Descending</option>
-                    <option value={1}>Ascending</option>
-                  </Select>
-                  {/* <FormHelperText>{errorStatus.status && errorStatus.status[0]}</FormHelperText> */}
-                </FormControl>
-              </Paper>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
 
-      <br/>
-
-      <Grid container spacing={2}>
-        <Grid item lg={8} md={8} sm={12} xs={12}>
-          <Grid container spacing={2}>
-            <Grid item lg={6} md={6} sm={12} xs={12}>
-              <Paper component="form" className={classes.searchSelectRoot} fullWidth>
-                <FormControl
-                  // error={errorStatus.status && true}
-                  variant="outlined" className={classes.formControl} fullWidth>
-                  <InputLabel htmlFor="outlined-age-native-simple">Search Type</InputLabel>
-                  <Select
-                    fullWidth
-                    native
-                    defaultValue={formSearch.search_type}
-                    onChange={handleSearch}
-                    label="Search Type"
-                    inputProps={{
-                      name: 'search_type',
-                      id: 'outlined-age-native-simple'
-                    }}
-                    name="search_type"
-                    // inputRef={register}
-                  >
-                    <option value="name">Name</option>
-                    <option value="type">Type</option>
-                  </Select>
-                  {/* <FormHelperText>{errorStatus.status && errorStatus.status[0]}</FormHelperText> */}
-                </FormControl>
-              </Paper>
-            </Grid>
-            <Grid item lg={6} md={6} sm={12} xs={12}>
-              <Paper className={classes.searchRoot}>
-                <InputBase
-                  className={classes.input}
-                  name="search"
-                  placeholder="Search"
-                  inputProps={{ 'aria-label': 'Search Account' }}
-                  onChange={handleSearch}
-                  value={formSearch.search}
-                />
-                <Divider className={classes.divider} orientation="vertical" />
-                <IconButton className={classes.iconButton} aria-label="search">
-                  <Search />
-                </IconButton>
-              </Paper>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item lg={4} md={4} sm={12} xs={12}>
-
-        </Grid>
-      </Grid>
 
       <br/>
 

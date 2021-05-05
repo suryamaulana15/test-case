@@ -12,7 +12,8 @@ const schema = yup.object().shape({
   type: yup.string().required(),
 });
 
-const useStyles = makeStyles((theme) => ({btnSuccess: {
+const useStyles = makeStyles((theme) => ({
+  btnSuccess: {
     color: "#FFFFFF",
     backgroundColor: '#27AE60',
     textTransform: 'none',

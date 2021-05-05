@@ -67,7 +67,7 @@ const TableBodyComponent = props => {
             </IconButton>
           </Tooltip>
           <Tooltip title="Delete Account">
-            <IconButton aria-label="Delete Account">
+            <IconButton aria-label="Delete Account" onClick={props.deleted}>
               <Settings className={classes.btnDelete} />
             </IconButton>
           </Tooltip>

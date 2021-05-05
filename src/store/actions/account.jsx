@@ -126,3 +126,44 @@ export const storeAccount = (storeData) => {
       });
   }
 }
+
+export const updateAccountStart = () => {
+  return {
+    type: actionTypes.UPDATE_ACCOUNT_START
+  };
+};
+
+export const updateAccountSuccess = () => {
+  return {
+    type: actionTypes.UPDATE_ACCOUNT_SUCCESS
+  };
+};
+
+export const updateAccountFail = (error) => {
+  return {
+    type: actionTypes.UPDATE_ACCOUNT_FAIL,
+    error: error
+  };
+};
+
+export const updateAccount = (id, storeData, page, formSearch) => {
+  return dispatch => {
+    dispatch(updateAccountStart());
+    axios.put('api/v1/finance-accounts/'+id, storeData,{
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`
+      }
+    })
+      .then(response => {
+        dispatch(updateAccountSuccess());
+        dispatch(fetchAccoutnts(page, formSearch));
+        dispatch(setAlert('success update account', "success"));
+      })
+      .catch(err => {
+        dispatch(updateAccountFail(err.response.data.error.message));
+        dispatch(setAlert(err.response.data.error.message, "error"));
+      });
+  }
+}
