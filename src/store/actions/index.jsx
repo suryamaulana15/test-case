@@ -12,5 +12,6 @@ export {
   fetchAccoutnts,
   getCountAccount,
   storeAccount,
-  updateAccount
+  updateAccount,
+  deleteAccount
 } from './account'

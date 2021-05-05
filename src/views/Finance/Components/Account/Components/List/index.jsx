@@ -89,6 +89,7 @@ const List = props => {
               key={account.id}
               // detailed={() => props.show(asset)}
               edited={() => props.edit(account)}
+              deleted={() => props.remove(account)}
               // deleted={() => {
               //   props.onCloseAlert()
               //   props.onDialogBox('Yakin ingin menghapus data Aset? ', asset, asset.uuid, actions.deleteAsetWakaf)
@@ -121,11 +122,6 @@ const List = props => {
 
   return ( loading ? <Loading/> :
     <Fragment>
-      <br/>
-
-
-      <br/>
-
       <Grid container spacing={2}>
         <Grid item xl={12} md={12} sm={12} xs={12}>
           <TableContainer component={Paper}>

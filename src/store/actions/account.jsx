@@ -167,3 +167,44 @@ export const updateAccount = (id, storeData, page, formSearch) => {
       });
   }
 }
+
+export const deleteAccountStart = () => {
+  return {
+    type: actionTypes.DELETE_ACCOUNT_START
+  };
+};
+
+export const deleteAccountSuccess = () => {
+  return {
+    type: actionTypes.DELETE_ACCOUNT_SUCCESS
+  };
+};
+
+export const deleteAccountFail = (error) => {
+  return {
+    type: actionTypes.DELETE_ACCOUNT_FAIL,
+    error: error
+  };
+};
+
+export const deleteAccount = (id, page, formSearch) => {
+  return dispatch => {
+    dispatch(deleteAccountStart());
+    axios.delete('api/v1/finance-accounts/'+id,{
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`
+      }
+    })
+      .then(response => {
+        dispatch(deleteAccountSuccess());
+        dispatch(fetchAccoutnts(page, formSearch));
+        dispatch(setAlert('success delete account', "success"));
+      })
+      .catch(err => {
+        dispatch(deleteAccountFail(err.response.data.error.message));
+        dispatch(setAlert(err.response.data.error.message, "error"));
+      });
+  }
+}

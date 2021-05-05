@@ -4,7 +4,20 @@ import {
 } from './Components';
 import * as actions from '../../../../store/actions';
 import {connect} from "react-redux";
-import {Divider, Fab, FormControl, Grid, IconButton, InputBase, InputLabel, Select} from "@material-ui/core";
+import {
+  Divider,
+  Fab,
+  FormControl,
+  Grid,
+  IconButton,
+  InputBase,
+  InputLabel,
+  Select,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText, Button, DialogActions
+} from "@material-ui/core";
 import {AddCircle, Search} from "@material-ui/icons";
 import {makeStyles} from "@material-ui/core/styles";
 import {Modal} from '../../../../components/UI';
@@ -56,6 +69,12 @@ const Account = props => {
     setForm('');
   };
 
+  const [removeData, setRemoveData] = useState('');
+  const [openDialog, setOpenDialog] = useState(false);
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  }
+
   const add = () => {
     setModalState({
       open: true,
@@ -76,6 +95,12 @@ const Account = props => {
     setForm(<Update account={account} page={page} closedModalDialog={() => closedModalDialog()}/>);
   }
 
+  const remove = (account, formSearch) => {
+    account.formSearch = formSearch
+    setRemoveData(account);
+    setOpenDialog(true);
+  }
+
   const [formSearch, setFormSearch] = useState({
     sort_field: 'id',
     sort_type: -1,
@@ -93,7 +118,7 @@ const Account = props => {
   };
 
   const {
-    onGetCountAccount,changingUpdate,page
+    onGetCountAccount,changingUpdate,page,onDelete
   } = props;
 
   useEffect(() => {
@@ -237,7 +262,32 @@ const Account = props => {
           </Grid>
         </Grid>
       </>
-      <List formSearch={formSearch} edit={(account) => edit(account, formSearch)}/>
+      <List formSearch={formSearch} edit={(account) => edit(account, formSearch)} remove={(account) => remove(account, formSearch)}/>
+
+      <Dialog
+        open={openDialog}
+        onClose={handleCloseDialog}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Yakin ingin menghapus data Berita?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {removeData.name}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog} color="primary">
+            Batal
+          </Button>
+          <Button onClick={() => {
+            onDelete(removeData.id, page, removeData.formSearch)
+            handleCloseDialog()
+          }} color="primary" autoFocus>
+            Hapus
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Fragment>
   );
 };
@@ -251,7 +301,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onGetCountAccount: () => dispatch(actions.getCountAccount())
+    onGetCountAccount: () => dispatch(actions.getCountAccount()),
+    onDelete: (id, page, formSearch) => dispatch(actions.deleteAccount(id, page, formSearch))
   };
 };
 

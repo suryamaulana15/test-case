@@ -15,10 +15,8 @@
       <change beforePath="$PROJECT_DIR$/src/store/actions/account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/account.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/account.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/Create/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/Create/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/Components/TableBodyComponent/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/Components/TableBodyComponent/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/Update/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/Update/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Account/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +69,7 @@
       <workItem from="1619667296634" duration="122000" />
       <workItem from="1619931025391" duration="76000" />
       <workItem from="1620205743061" duration="12950000" />
-      <workItem from="1620254759895" duration="446000" />
+      <workItem from="1620254759895" duration="2601000" />
     </task>
     <servers />
   </component>

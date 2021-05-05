@@ -1,6 +1,6 @@
 import React,{Fragment} from "react";
 import { Chip, IconButton, makeStyles, TableCell, TableRow, Tooltip } from '@material-ui/core'
-import { Edit as EditIcon, Settings } from '@material-ui/icons'
+import {Delete, Edit as EditIcon} from '@material-ui/icons'
 // import NumberFormat from 'react-number-format';
 import { NavLink } from 'react-router-dom';
 import palette from '../../../../../../../../theme/palette';
@@ -68,7 +68,7 @@ const TableBodyComponent = props => {
           </Tooltip>
           <Tooltip title="Delete Account">
             <IconButton aria-label="Delete Account" onClick={props.deleted}>
-              <Settings className={classes.btnDelete} />
+              <Delete className={classes.btnDelete} />
             </IconButton>
           </Tooltip>
         </TableCell>

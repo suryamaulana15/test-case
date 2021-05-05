@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions/actionTypes'
 import { updateObject } from '../../shared/utility'
+import {DELETE_ACCOUNT_SUCCESS} from "../actions/actionTypes";
 
 const initialState = {
   account: {},
@@ -72,6 +73,20 @@ const updateAccountFail = (state, action) => {
   return updateObject(state, { error: action.error, loading: false })
 }
 
+const deleteAccountStart = (state, action) => {
+  return updateObject(state, { error: {}, loading: true })
+}
+
+const deleteAccountSuccess = (state, action) => {
+  return updateObject(state, {
+    loading: false
+  })
+}
+
+const deleteAccountFail = (state, action) => {
+  return updateObject(state, { error: action.error, loading: false })
+}
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_ACCOUNTS_START:
@@ -98,6 +113,12 @@ const reducer = (state = initialState, action) => {
       return updateAccountSuccess(state, action);
     case actionTypes.UPDATE_ACCOUNT_FAIL:
       return updateAccountFail(state, action);
+    case actionTypes.DELETE_ACCOUNT_START:
+      return deleteAccountStart(state, action);
+    case actionTypes.DELETE_ACCOUNT_SUCCESS:
+      return deleteAccountSuccess(state, action);
+    case actionTypes.DELETE_ACCOUNT_FAIL:
+      return deleteAccountFail(state, action);
     default: return state
   }
 }
