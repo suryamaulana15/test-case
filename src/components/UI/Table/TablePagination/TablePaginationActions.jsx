@@ -20,15 +20,15 @@ const TablePaginationActions = props => {
   }
 
   const handleBackButtonClick = (event) => {
-    onChangePage(event, (page - 1) + 1)
+    onChangePage(event, (page - 1))
   }
 
   const handleNextButtonClick = (event) => {
-    onChangePage(event, (page + 1) + 1)
+    onChangePage(event, (page + 1))
   }
 
   const handleLastPageButtonClick = (event) => {
-    onChangePage(event, (Math.max(0, Math.ceil(count / rowsPerPage) - 1) + 1))
+    onChangePage(event, (Math.max(0, Math.ceil(count / rowsPerPage) - 1)))
   }
 
   return (

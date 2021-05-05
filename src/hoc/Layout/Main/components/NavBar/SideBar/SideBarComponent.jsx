@@ -179,26 +179,24 @@ const SideBarComponent = props => {
         <List
           className={classes.menus}
         >
-           <NavLink to="/dashboard">
-          <Button
-            activeclassname={classes.active}
-            className={classes.button}
-            component={CustomRouterLink}
-            to='/dashboard'
-            onClick={props.closed}
-          >
-            <ListItem button key='product'>
-              <ListItemIcon>
-                <DashboardIcon style={{ color: textMenuWhite }} />
-              </ListItemIcon>
-              <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>dashboard</Typography>} />
-            </ListItem>
-          </Button>
+          <NavLink to="/dashboard">
+            <Button
+              activeclassname={classes.active}
+              className={classes.button}
+              component={CustomRouterLink}
+              to='/dashboard'
+              onClick={props.closed}
+            >
+              <ListItem button key='product'>
+                <ListItemIcon>
+                  <DashboardIcon style={{ color: textMenuWhite }} />
+                </ListItemIcon>
+                <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>dashboard</Typography>} />
+              </ListItem>
+            </Button>
+          </NavLink>
 
-           </NavLink>
-        </List>
-
-        <NavLink to="/finance">
+          <NavLink to="/finance">
             <Button
               activeclassname={classes.active}
               className={classes.button}
@@ -213,8 +211,9 @@ const SideBarComponent = props => {
                 <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>finance</Typography>} />
               </ListItem>
             </Button>
-
           </NavLink>
+
+        </List>
       </SwipeableDrawer>
       <Dialog
         open={dialogOpen}

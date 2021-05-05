@@ -11,23 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="336183b1-5239-40aa-9e30-4cdd9eecda94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/actions/auth.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/auth.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Dashboard/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Finance/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/account.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/account.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/Create/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/Components/TableBodyComponent/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/Components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/Update/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/axios-orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios-orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouteWithLayout/RouteWithLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouteWithLayout/RouteWithLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Table/TablePagination/TablePaginationActions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Table/TablePagination/TablePaginationActions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/utility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/utility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/product.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/product.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Finance/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,16 +54,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/store/reducers" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/theme" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/Components/TableBody" />
       <recent name="$PROJECT_DIR$/src/store/reducers" />
     </key>
   </component>
@@ -70,7 +80,13 @@
       <updated>1619418703941</updated>
       <workItem from="1619418705081" duration="6550000" />
       <workItem from="1619489576982" duration="4515000" />
-      <workItem from="1619499097171" duration="2253000" />
+      <workItem from="1619499097171" duration="8062000" />
+      <workItem from="1619580035523" duration="6359000" />
+      <workItem from="1619592073176" duration="6395000" />
+      <workItem from="1619622267630" duration="3152000" />
+      <workItem from="1619667296634" duration="122000" />
+      <workItem from="1619931025391" duration="76000" />
+      <workItem from="1620205743061" duration="2062000" />
     </task>
     <servers />
   </component>
@@ -88,5 +104,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619509031778">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="461" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1619509031778" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619592302636">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1619592302636" />
   </component>
 </project>
