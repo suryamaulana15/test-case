@@ -65,10 +65,11 @@ export const getCountAccountFail = (error) => {
   };
 };
 
-export const getCountAccount = () => {
+export const getCountAccount = (formSearch) => {
+  let param = formSearch.search_type+'='+formSearch.search;
   return dispatch => {
     dispatch(getCountAccountStart());
-    axios.get('api/v1/finance-accounts?sort_field=id&sort_type=-1&page=0&per_page=1000', {
+    axios.get('api/v1/finance-accounts?'+param+'&sort_field=id&sort_type=-1&page=0&per_page=1000', {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',

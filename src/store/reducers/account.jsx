@@ -10,6 +10,7 @@ const initialState = {
   loading: false,
   changing: 0,
   changingUpdate: 0,
+  changingDelete: 0,
 }
 
 const fetchAccountStart = (state, action) => {
@@ -79,6 +80,7 @@ const deleteAccountStart = (state, action) => {
 
 const deleteAccountSuccess = (state, action) => {
   return updateObject(state, {
+    changingDelete: state.changingDelete+1,
     loading: false
   })
 }

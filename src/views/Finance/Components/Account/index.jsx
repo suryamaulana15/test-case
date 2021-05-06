@@ -118,13 +118,17 @@ const Account = props => {
   };
 
   const {
-    onGetCountAccount,changingUpdate,page,onDelete
+    onGetCountAccount,changing,changingUpdate,page,onDelete,changingDelete
   } = props;
 
   useEffect(() => {
-    onGetCountAccount();
     closedModalDialog();
-  },[onGetCountAccount, changingUpdate]);
+    const timer = setTimeout(() => {
+      onGetCountAccount(formSearch);
+    }, 1000)
+
+    return () => clearTimeout(timer);
+  },[onGetCountAccount,changing,changingUpdate,formSearch,changingDelete]);
 
   return (
     <Fragment>
@@ -270,10 +274,10 @@ const Account = props => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Yakin ingin menghapus data Berita?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Delete "+removeData.name }</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            {removeData.name}
+            Are you sure?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -294,14 +298,16 @@ const Account = props => {
 
 const mapStateToProps = state => {
   return {
+    changing: state.account.changing,
     changingUpdate: state.account.changingUpdate,
+    changingDelete: state.account.changingDelete,
     page: state.account.page
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onGetCountAccount: () => dispatch(actions.getCountAccount()),
+    onGetCountAccount: (formSearch) => dispatch(actions.getCountAccount(formSearch)),
     onDelete: (id, page, formSearch) => dispatch(actions.deleteAccount(id, page, formSearch))
   };
 };
