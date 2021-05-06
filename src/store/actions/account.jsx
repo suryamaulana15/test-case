@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios-orders';
 import { setAlert } from './alert';
+import {GET_ALL_ACCOUNT_SUCCESS} from "./actionTypes";
 
 export const fetchAccountsStart = () => {
   return {
@@ -207,6 +208,46 @@ export const deleteAccount = (id, page, formSearch) => {
       .catch(err => {
         dispatch(deleteAccountFail(err.response.data.error.message));
         dispatch(setAlert(err.response.data.error.message, "error"));
+      });
+  }
+}
+
+export const getAllAccountStart = () => {
+  return {
+    type: actionTypes.GET_ALL_ACCOUNT_START
+  };
+};
+
+export const getAllAccountSuccess = (allAccount) => {
+  return {
+    type: actionTypes.GET_ALL_ACCOUNT_SUCCESS,
+    allAccount: allAccount
+  };
+};
+
+export const getAllAccountFail = (error) => {
+  return {
+    type: actionTypes.GET_ALL_ACCOUNT_FAIL,
+    error: error
+  };
+};
+
+export const getAllAccount = () => {
+  return dispatch => {
+    dispatch(getAllAccountStart());
+    axios.get('api/v1/finance-accounts?&sort_field=id&sort_type=-1&page=0&per_page=1000', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`
+      }
+    })
+      .then(response => {
+        dispatch(getAllAccountSuccess(response.data.data));
+      })
+      .catch(err => {
+        dispatch(setAlert(err.response.data.error.message, "error"));
+        dispatch(getAllAccountFail(err.response.data.error.message));
       });
   }
 }

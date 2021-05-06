@@ -10,6 +10,7 @@ const initialState = {
   changing: 0,
   changingUpdate: 0,
   changingDelete: 0,
+  allAccount: []
 }
 
 const fetchAccountStart = (state, action) => {
@@ -88,6 +89,21 @@ const deleteAccountFail = (state, action) => {
   return updateObject(state, { error: action.error, loading: false })
 }
 
+const getAllAccountStart = (state, action) => {
+  return updateObject(state, { error: {}, loading: true })
+}
+
+const getAllAccountSuccess = (state, action) => {
+  return updateObject(state, {
+    allAccount: action.allAccount,
+    loading: false
+  })
+}
+
+const getAllAccountFail = (state, action) => {
+  return updateObject(state, { error: action.error, loading: false })
+}
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_ACCOUNTS_START:
@@ -120,6 +136,12 @@ const reducer = (state = initialState, action) => {
       return deleteAccountSuccess(state, action);
     case actionTypes.DELETE_ACCOUNT_FAIL:
       return deleteAccountFail(state, action);
+    case actionTypes.GET_ALL_ACCOUNT_START:
+      return getAllAccountStart(state, action);
+    case actionTypes.GET_ALL_ACCOUNT_SUCCESS:
+      return getAllAccountSuccess(state, action);
+    case actionTypes.GET_ALL_ACCOUNT_FAIL:
+      return getAllAccountFail(state, action);
     default: return state
   }
 }

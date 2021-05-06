@@ -66,7 +66,6 @@ export const getCountFinanceFail = (error) => {
 };
 
 export const getCountFinance = (formSearch) => {
-  console.log(formSearch);
   let param = formSearch.search_type+'='+formSearch.search;
   return dispatch => {
     dispatch(getCountFinanceStart());

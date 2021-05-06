@@ -1,7 +1,7 @@
 import React,{Fragment} from "react";
 import { Chip, IconButton, makeStyles, TableCell, TableRow, Tooltip } from '@material-ui/core'
 import {Delete, Edit as EditIcon} from '@material-ui/icons'
-// import NumberFormat from 'react-number-format';
+import NumberFormat from 'react-number-format';
 import { NavLink } from 'react-router-dom';
 import palette from '../../../../../../../../theme/palette';
 import moment from "moment";
@@ -65,7 +65,7 @@ const TableBodyComponent = props => {
           {finance.title}
         </TableCell>
         <TableCell>
-          {finance.credit_amount}
+          <NumberFormat thousandSeparator={'.'} prefix={'Rp '} decimalSeparator={','} displayType={'text'} value={finance.credit_amount}/>
         </TableCell>
         <TableCell>
           <Tooltip title="Edit Account">

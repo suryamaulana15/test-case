@@ -13,7 +13,8 @@ export {
   getCountAccount,
   storeAccount,
   updateAccount,
-  deleteAccount
+  deleteAccount,
+  getAllAccount
 } from './account';
 
 export {

@@ -1,15 +1,30 @@
-import React, {Fragment, useState} from "react";
-import {Card, CardContent, Grid, TextField, makeStyles, Button} from "@material-ui/core";
+import React, {Fragment, useEffect, useState} from "react";
+import {
+  Card,
+  CardContent,
+  Grid,
+  TextField,
+  makeStyles,
+  Button,
+  FormControl,
+  InputLabel,
+  Select, FormHelperText
+} from "@material-ui/core";
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as actions from '../../../../../../store/actions';
 import {connect} from "react-redux";
+import Paper from "@material-ui/core/Paper";
+import {isEmpty} from "../../../../../../shared/utility";
+import {Loading} from "../../../../../../components/UI";
+import NumberFormat from 'react-number-format';
 
 const schema = yup.object().shape({
-  name: yup.string().required(),
+  title: yup.string().required(),
+  amount: yup.string().required(),
+  finance_account_id: yup.string().required(),
   description: yup.string().required(),
-  type: yup.string().required(),
 });
 
 const useStyles = makeStyles((theme) => ({
@@ -26,13 +41,29 @@ const useStyles = makeStyles((theme) => ({
 const Create = props => {
   const classes = useStyles();
   const {
-    onStoreAccount
+    onStoreFinance,allAccount,onGetAllAccount,loadingAccount
   } = props;
 
+  useEffect(() => {
+    onGetAllAccount()
+  },[onGetAllAccount]);
+
+  let optionAccount = '';
+  if (!isEmpty(allAccount)) {
+    optionAccount = (
+      <Fragment>
+        {allAccount.map((account) => (
+          <option key={account.id} value={account.id}>{account.name}</option>
+        ))}
+      </Fragment>
+    )
+  }
+
   const [formState, setFormState] = useState({
-    name : '',
-    description : '',
-    type : ''
+    title : '',
+    amount : '',
+    finance_account_id : '',
+    description: ''
   });
 
   const handleChange = (event) => {
@@ -57,10 +88,14 @@ const Create = props => {
   })
 
   const onSubmit = data => {
-    onStoreAccount(data);
+    data.amount = +(data.amount).replace(/[Rp.]/g, '');
+    data.credit_amount = data.amount;
+    data.debit_amount = data.amount;
+    data.finance_account_id = +(formState.finance_account_id);
+    onStoreFinance(data);
   }
 
-  return (
+  return (loadingAccount ? <Loading/> :
     <Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={2}>
@@ -71,31 +106,68 @@ const Create = props => {
                   <CardContent>
                     <div>
                       <TextField
-                        label="Account Name"
+                        label="Finance Name"
                         variant="outlined"
-                        name="name"
-                        defaultValue={formState.name}
+                        name="title"
+                        defaultValue={formState.title}
                         onChange={handleChange}
                         fullWidth
                         inputRef={register}
-                        error={!!errors.name}
-                        helperText={errors.name && errors.name.message}
+                        error={!!errors.title}
+                        helperText={errors.title && errors.title.message}
                       />
                     </div>
                     <br/>
 
                     <div>
-                      <TextField
-                        label="Type"
-                        variant="outlined"
-                        name="type"
-                        defaultValue={formState.type}
-                        onChange={handleChange}
-                        fullWidth
-                        inputRef={register}
-                        error={!!errors.type}
-                        helperText={errors.type && errors.type.message}
-                      />
+                      <Paper component="form" className={classes.searchSelectRoot} fullWidth>
+                        <FormControl
+                          error={errors.finance_account_id && true}
+                          variant="outlined" className={classes.formControl} fullWidth>
+                          <InputLabel htmlFor="outlined-age-native-simple">Finance Account</InputLabel>
+                          <Select
+                            fullWidth
+                            native
+                            defaultValue={formState.finance_account_id}
+                            onChange={handleChange}
+                            label="Finance Account"
+                            inputProps={{
+                              name: 'finance_account_id',
+                              id: 'outlined-age-native-simple'
+                            }}
+                            name="finance_account_id"
+                            inputRef={register}
+                          >
+                            <option aria-label="None" value="" />
+                            {/*<option value='62'>LINK AJA</option>*/}
+                            {optionAccount}
+                            {/*<option value="title">Reference</option>*/}
+                          </Select>
+                           <FormHelperText>{errors.finance_account_id && errors.finance_account_id.message}</FormHelperText>
+                        </FormControl>
+                      </Paper>
+                    </div>
+                    <br/>
+
+                    <div>
+                      <FormControl
+                        error={errors.amount ? true : false}
+                        variant="outlined" className={classes.formControl} fullWidth>
+                        <NumberFormat
+                          style={{ padding: '18.5px 14px', width: '90%' }}
+                          allowLeadingZeros={false}
+                          thousandSeparator="."
+                          decimalSeparator={','}
+                          prefix={'Rp.'}
+                          name="amount"
+                          getInputRef={register}
+                          isNumericString={true}
+                          defaultValue={formState.amount}
+                          onChange={handleChange}
+                          placeholder="Amount"
+                        />
+                        <FormHelperText>{errors.amount && errors.amount.message}</FormHelperText>
+                      </FormControl>
                     </div>
                     <br/>
 
@@ -142,10 +214,18 @@ const Create = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
   return {
-    onStoreAccount: (storeDate) => dispatch(actions.storeAccount(storeDate))
+    allAccount: state.account.allAccount,
+    loadingAccount: state.account.loading
   }
 }
 
-export default connect(null, mapDispatchToProps)(Create);
+const mapDispatchToProps = dispatch => {
+  return {
+    onStoreFinance: (storeDate) => dispatch(actions.storeFinance(storeDate)),
+    onGetAllAccount: () => dispatch(actions.getAllAccount())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Create);
