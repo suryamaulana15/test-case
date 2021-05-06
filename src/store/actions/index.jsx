@@ -14,4 +14,12 @@ export {
   storeAccount,
   updateAccount,
   deleteAccount
-} from './account'
+} from './account';
+
+export {
+  fetchFinances,
+  getCountFinance,
+  storeFinance,
+  updateFinance,
+  deleteFinance
+} from './finance';

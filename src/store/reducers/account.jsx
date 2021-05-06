@@ -1,6 +1,5 @@
 import * as actionTypes from '../actions/actionTypes'
 import { updateObject } from '../../shared/utility'
-import {DELETE_ACCOUNT_SUCCESS} from "../actions/actionTypes";
 
 const initialState = {
   account: {},
