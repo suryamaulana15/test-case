@@ -89,7 +89,7 @@ const List = props => {
             <TableBodyComponents
               finance={finance}
               key={finance.id}
-              // detailed={() => props.show(asset)}
+              detailed={() => props.show(finance)}
               edited={() => props.edit(finance)}
               deleted={() => props.remove(finance)}
               // deleted={() => {

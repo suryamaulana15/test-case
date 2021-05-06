@@ -1,6 +1,6 @@
 import React , {Fragment, useEffect, useState} from "react";
 import {
-  List,Create, Update
+  List, Create, Update, Show
 } from './Components';
 import * as actions from '../../../../store/actions';
 import {connect} from "react-redux";
@@ -77,7 +77,7 @@ const Transaction = props => {
   const add = () => {
     setModalState({
       open: true,
-      title: 'Create New Finance',
+      title: 'Create New Finance Transaction',
       maxWidth: 'sm'
     });
     setForm(<Create/>);
@@ -87,11 +87,20 @@ const Transaction = props => {
     finance.formSearch = formSearch;
     setModalState({
       open: true,
-      title: 'Edit Finance',
+      title: 'Edit Finance Transaction',
       maxWidth: 'sm'
     });
 
     setForm(<Update finance={finance} page={page} closedModalDialog={() => closedModalDialog()}/>);
+  }
+
+  const show = (finance) => {
+    setModalState({
+      open: true,
+      title: 'View Finance Transaction',
+      maxWidth: 'sm'
+    });
+    setForm(<Show finance={finance}/>);
   }
 
   const remove = (finance, formSearch) => {
@@ -264,7 +273,7 @@ const Transaction = props => {
           </Grid>
         </Grid>
       </>
-      <List formSearch={formSearch} edit={(finance) => edit(finance, formSearch)} remove={(finance) => remove(finance, formSearch)}/>
+      <List formSearch={formSearch} edit={(finance) => edit(finance, formSearch)} remove={(finance) => remove(finance, formSearch)} show={(finance) => show(finance)}/>
 
       <Dialog
         open={openDialog}

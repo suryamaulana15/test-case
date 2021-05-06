@@ -170,14 +170,14 @@ const Appbar = props => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <>
+      <div style={{margin:'8px'}}>
         <strong>User Name</strong> <br/>
         {sessionStorage.getItem('username')}<br/>
         <strong>Name</strong> <br/>
         {sessionStorage.getItem('name')}<br/>
         <strong>Last Login</strong> <br/>
         {moment(moment(sessionStorage.getItem('last_login')).toDate()).format('YYYY-MM-DD HH:mm:ss')}<br/>
-      </>
+      </div>
       {/*<MenuItem onClick={signOut}>Sign Out</MenuItem>*/}
     </Menu>
   )

@@ -1,6 +1,6 @@
 import React,{Fragment} from "react";
 import { Chip, IconButton, makeStyles, TableCell, TableRow, Tooltip } from '@material-ui/core'
-import {Delete, Edit as EditIcon} from '@material-ui/icons'
+import {Delete, Edit as EditIcon, Search} from '@material-ui/icons'
 import NumberFormat from 'react-number-format';
 import { NavLink } from 'react-router-dom';
 import palette from '../../../../../../../../theme/palette';
@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
     border: '1px solid #231E2E',
     width: 150
   },
+  btnShow: {
+    color: theme.palette.success.main,
+  },
   btnDelete: {
     color: theme.palette.error.main,
   },
@@ -68,12 +71,17 @@ const TableBodyComponent = props => {
           <NumberFormat thousandSeparator={'.'} prefix={'Rp '} decimalSeparator={','} displayType={'text'} value={finance.credit_amount}/>
         </TableCell>
         <TableCell>
-          <Tooltip title="Edit Account">
+          <Tooltip title="View Finance Transaction">
+            <IconButton aria-label="edit" onClick={props.detailed}>
+              <Search className={classes.btnShow}/>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Edit Finance Transaction">
             <IconButton aria-label="edit" onClick={props.edited}>
               <EditIcon className={classes.btnEdit}/>
             </IconButton>
           </Tooltip>
-          <Tooltip title="Delete Account">
+          <Tooltip title="Delete Finance Transaction">
             <IconButton aria-label="Delete Account" onClick={props.deleted}>
               <Delete className={classes.btnDelete} />
             </IconButton>
