@@ -8,10 +8,10 @@ export const fetchFinancesStart = () => {
   };
 };
 
-export const fetchFinancesSuccess = (account, page) => {
+export const fetchFinancesSuccess = (finance, page) => {
   return {
     type: actionTypes.FETCH_FINANCES_SUCCESS,
-    account: account,
+    finance: finance,
     page: page
   };
 };
@@ -66,6 +66,7 @@ export const getCountFinanceFail = (error) => {
 };
 
 export const getCountFinance = (formSearch) => {
+  console.log(formSearch);
   let param = formSearch.search_type+'='+formSearch.search;
   return dispatch => {
     dispatch(getCountFinanceStart());
@@ -118,7 +119,7 @@ export const storeFinance = (storeData) => {
     })
       .then(response => {
         dispatch(storeFinanceSuccess())
-        dispatch(setAlert('success input account', "success"))
+        dispatch(setAlert('success input finance transaction', "success"))
       })
       .catch(err => {
         dispatch(storeFinanceFail(err.response.data.error.message))
@@ -160,7 +161,7 @@ export const updateFinance = (id, storeData, page, formSearch) => {
       .then(response => {
         dispatch(updateFinanceSuccess());
         dispatch(fetchFinances(page, formSearch));
-        dispatch(setAlert('success update account', "success"));
+        dispatch(setAlert('success update finance transaction', "success"));
       })
       .catch(err => {
         dispatch(updateFinanceFail(err.response.data.error.message));
@@ -201,7 +202,7 @@ export const deleteFinance = (id, page, formSearch) => {
       .then(response => {
         dispatch(deleteFinanceSuccess());
         dispatch(fetchFinances(page, formSearch));
-        dispatch(setAlert('success delete account', "success"));
+        dispatch(setAlert('success delete finance transaction', "success"));
       })
       .catch(err => {
         dispatch(deleteFinanceFail(err.response.data.error.message));

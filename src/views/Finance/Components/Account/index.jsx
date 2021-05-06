@@ -169,7 +169,7 @@ const Account = props => {
                       onChange={handleSearch}
                       label="Search Type"
                       inputProps={{
-                        name: 'searchType',
+                        name: 'sort_field',
                         id: 'outlined-age-native-simple'
                       }}
                       name="sort_field"

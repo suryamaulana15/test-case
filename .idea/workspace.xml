@@ -11,13 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="336183b1-5239-40aa-9e30-4cdd9eecda94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/actions/finance.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/finance.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/Create/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/Components/TableBodyComponent/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/Components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/Update/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/account.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/account.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/finance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/finance.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Account/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Account/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,21 +40,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/Finance/Components/Transaction" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/store/reducers" />
-      <recent name="$PROJECT_DIR$/src/views" />
-      <recent name="$PROJECT_DIR$/src/theme" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/Finance/Components/Account/Components/List/Components/TableBody" />
       <recent name="$PROJECT_DIR$/src/store/reducers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/Finance/Components/Transaction" />
+      <recent name="$PROJECT_DIR$/src/store/reducers" />
+      <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/theme" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -71,7 +76,7 @@
       <workItem from="1619931025391" duration="76000" />
       <workItem from="1620205743061" duration="12950000" />
       <workItem from="1620254759895" duration="2842000" />
-      <workItem from="1620271440802" duration="2264000" />
+      <workItem from="1620271440802" duration="6586000" />
     </task>
     <servers />
   </component>

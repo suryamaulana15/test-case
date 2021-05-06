@@ -24,6 +24,7 @@ export const fetchAccountsFail = (error) => {
 };
 
 export const fetchAccoutnts = (page, formSearch) => {
+  console.log(formSearch);
   let param = '&sort_field='+formSearch.sort_field+'&sort_type='+formSearch.sort_type+'&'+formSearch.search_type+'='+formSearch.search;
   return dispatch => {
     dispatch(fetchAccountsStart());
