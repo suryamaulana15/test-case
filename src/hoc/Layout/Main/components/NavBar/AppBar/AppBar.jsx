@@ -25,7 +25,6 @@ const iconBlack = '#000000'
 
 const useStyles = makeStyles(theme => ({
   root: {
-
     display: 'flex'
   },
   content: {
@@ -54,7 +53,9 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     }),
-    backgroundColor: theme.palette.main.primary
+    // backgroundColor: theme.palette.main.primary,
+    background: 'transparent linear-gradient(96deg, #569AD3 0%, #488CC7 100%) 0% 0% no-repeat padding-box',
+    // opacity: 1
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -169,19 +170,15 @@ const Appbar = props => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <box>
-        <Typography variant={"body2"}> User Name</Typography>
-        <Typography variant={"body1"}> {sessionStorage.getItem('username')} </Typography>
-        <Typography variant={"body2"}> Name</Typography>
-        <Typography variant={"body1"}> {sessionStorage.getItem('name')} </Typography>
-        <Typography variant={"body2"}> Last Login</Typography>
-        <Typography variant={"body1"}> {moment(moment(sessionStorage.getItem('last_login')).toDate()).format('YYYY-MM-DD HH:mm:ss')} </Typography>
-      </box>
-
-      <NavLink to="/#" style={{ textDecoration: 'none', color: 'inherit' }}>
-        <MenuItem onClick={signOut}>Sign Out</MenuItem>
-      </NavLink>
-      
+      <>
+        <strong>User Name</strong> <br/>
+        {sessionStorage.getItem('username')}<br/>
+        <strong>Name</strong> <br/>
+        {sessionStorage.getItem('name')}<br/>
+        <strong>Last Login</strong> <br/>
+        {moment(moment(sessionStorage.getItem('last_login')).toDate()).format('YYYY-MM-DD HH:mm:ss')}<br/>
+      </>
+      {/*<MenuItem onClick={signOut}>Sign Out</MenuItem>*/}
     </Menu>
   )
 

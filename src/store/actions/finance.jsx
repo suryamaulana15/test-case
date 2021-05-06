@@ -38,9 +38,8 @@ export const fetchFinances = (page, formSearch) => {
         dispatch(fetchFinancesSuccess(response.data, page))
       })
       .catch(err => {
-        dispatch(setAlert("Email atau Password Salah", "error"))
-        dispatch(fetchFinancesFail(err.response.data.error.message))
-        console.log(err)
+        dispatch(fetchFinancesFail(err.response.data.error.message));
+        dispatch(setAlert(err.response.data.error.message, "error"));
       });
   };
 };
@@ -80,8 +79,8 @@ export const getCountFinance = (formSearch) => {
         dispatch(getCountFinanceSuccess(response.data.count))
       })
       .catch(err => {
-        dispatch(setAlert("Email atau Password Salah", "error"))
         dispatch(getCountFinanceFail(err.response.data.error.message))
+        dispatch(setAlert(err.response.data.error.message, "error"))
         console.log(err)
       });
   }

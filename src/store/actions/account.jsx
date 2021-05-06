@@ -25,7 +25,6 @@ export const fetchAccountsFail = (error) => {
 };
 
 export const fetchAccoutnts = (page, formSearch) => {
-  console.log(formSearch);
   let param = '&sort_field='+formSearch.sort_field+'&sort_type='+formSearch.sort_type+'&'+formSearch.search_type+'='+formSearch.search;
   return dispatch => {
     dispatch(fetchAccountsStart());
@@ -40,8 +39,8 @@ export const fetchAccoutnts = (page, formSearch) => {
         dispatch(fetchAccountsSuccess(response.data, page))
       })
       .catch(err => {
-        dispatch(setAlert("Email atau Password Salah", "error"))
         dispatch(fetchAccountsFail(err.response.data.error.message))
+        dispatch(setAlert(err.response.data.error.message, "error"))
         console.log(err)
       });
   };
@@ -82,8 +81,8 @@ export const getCountAccount = (formSearch) => {
         dispatch(getCountAccountSuccess(response.data.count))
       })
       .catch(err => {
-        dispatch(setAlert("Email atau Password Salah", "error"))
         dispatch(getCountAccountFail(err.response.data.error.message))
+        dispatch(setAlert(err.response.data.error.message, "error"))
         console.log(err)
       });
   }

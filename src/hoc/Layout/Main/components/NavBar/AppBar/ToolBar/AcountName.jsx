@@ -56,16 +56,15 @@ const Profile = props => {
           className={classes.avatar}
           component={RouterLink}
           src=""
-          to="/profile"
         />
       </NavLink>
       <Typography
         className={classes.name}
         variant="h4"
       >
-        {userData.name}
+        {sessionStorage.name}
       </Typography>
-      <Typography variant="body2" style={{ color: nameColorWhite }}>{userData.roleId}</Typography>
+      <Typography variant="body2" style={{ color: nameColorWhite }}>{sessionStorage.username}</Typography>
     </div>
   )
 }

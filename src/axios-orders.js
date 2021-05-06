@@ -17,10 +17,10 @@ instance.interceptors.response.use(
     }),
   (error) => {
     console.log(error.response.status);
-    if(error.response.status === 401){
+    if(error.response.status === 401 || error.response.status === 404){
       sessionStorage.clear();
       window.location.href = 'sign-in';
-      return ;
+      return;
     }
     return Promise.reject(error);
   }

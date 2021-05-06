@@ -99,7 +99,7 @@ const Login =  props => {
 	});
 	
 	const onSubmit = event => {
-		console.log(event);
+		// console.log(event);
 		// addLogin(event, history)
 		props.onAuth(event, history)
 		// console.log(event);

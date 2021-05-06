@@ -49,7 +49,8 @@ const useStyles = makeStyles(theme => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: theme.palette.main.dark,
+    // backgroundColor: theme.palette.main.dark,
+    background: 'transparent linear-gradient(96deg, #569AD3 0%, #488CC7 100%) 0% 0% no-repeat padding-box',
   },
   // drawer: {
   //   width: drawerWidth,

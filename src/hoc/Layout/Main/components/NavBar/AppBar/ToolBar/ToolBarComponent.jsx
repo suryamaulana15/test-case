@@ -142,8 +142,7 @@ const ToolBarComponent = props => {
           <MenuIcon />
         </IconButton>
         <div className={classes.fontLogo}>
-          {/*<img src={require('../../../../../../../assets/images/logo/logo-manajemen-aset.png').default} alt="logo" width="150px" height="auto"/>*/}
-          Toko Surya Makmur
+          <img src={require('../../../../../../../assets/images/logo/paperlogowhite.svg').default} alt="logo" width="125px" height="auto"/>
         </div>
 
         {/* <RouterLink to="/">

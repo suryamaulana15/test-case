@@ -12,8 +12,37 @@
   <component name="ChangeListManager">
     <list default="true" id="336183b1-5239-40aa-9e30-4cdd9eecda94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/Update/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/Update/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/axios-orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios-orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/AcountName.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/ToolBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/ToolBar/ToolBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/account.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/finance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/finance.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/Produk.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/AddVariant/AddVariant.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/AddVariant/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/AddVariantTable/AddVariantTable.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/AddVariantTable/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/Detail/Detail.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/Detail/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/Edit/Edit.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/Edit/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/List/List.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/List/Product/Product.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/List/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/ListVariant/ListVariant.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/ListVariant/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/Store/Store.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/Store/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/UpdateProduct/UpdateProduct.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/UpdateProduct/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/UpdateVariantTable/UpdateVariantTable.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/UpdateVariantTable/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/components/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Produk/index.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +97,7 @@
       <workItem from="1619931025391" duration="76000" />
       <workItem from="1620205743061" duration="12950000" />
       <workItem from="1620254759895" duration="2842000" />
-      <workItem from="1620271440802" duration="14502000" />
+      <workItem from="1620271440802" duration="19915000" />
     </task>
     <servers />
   </component>
