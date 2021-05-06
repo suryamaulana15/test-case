@@ -11,8 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="336183b1-5239-40aa-9e30-4cdd9eecda94" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,8 @@
       <workItem from="1619931025391" duration="76000" />
       <workItem from="1620205743061" duration="12950000" />
       <workItem from="1620254759895" duration="2842000" />
-      <workItem from="1620271440802" duration="31450000" />
+      <workItem from="1620271440802" duration="31582000" />
+      <workItem from="1620337058060" duration="899000" />
     </task>
     <servers />
   </component>
@@ -87,15 +90,20 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/web-test-fullstack" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="461" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619509031778">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="461" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1619509031778" />
-    <state x="229" y="86" key="SettingsEditor" timestamp="1620273624944">
+    <state x="229" y="86" key="SettingsEditor" timestamp="1620337291254">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1620273624944" />
+    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1620337291254" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619592302636">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
