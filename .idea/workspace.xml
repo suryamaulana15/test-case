@@ -11,13 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="336183b1-5239-40aa-9e30-4cdd9eecda94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/Show/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/AppBar/AppBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/Components/TableBodyComponent/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/Components/TableBodyComponent/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/List/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/Components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Finance/Components/Transaction/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Main/components/NavBar/SideBar/SideBarComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +68,7 @@
       <workItem from="1619931025391" duration="76000" />
       <workItem from="1620205743061" duration="12950000" />
       <workItem from="1620254759895" duration="2842000" />
-      <workItem from="1620271440802" duration="31059000" />
+      <workItem from="1620271440802" duration="31450000" />
     </task>
     <servers />
   </component>

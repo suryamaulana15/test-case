@@ -3,8 +3,8 @@ import {
   Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions
 } from '@material-ui/core'
 import {
-  ChevronRight as ChevronRightIcon, ChevronLeft as ChevronLeftIcon, Dashboard as DashboardIcon, 
-  Input as SignOutIcon, RecentActorsSharp as RecentActorsSharpIcon
+  ChevronRight as ChevronRightIcon, ChevronLeft as ChevronLeftIcon, Dashboard as DashboardIcon,
+  Input as SignOutIcon, RecentActorsSharp as RecentActorsSharpIcon, CreditCard
 } from '@material-ui/icons'
 // import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import React, { forwardRef, Fragment, useState } from 'react'
@@ -207,7 +207,7 @@ const SideBarComponent = props => {
             >
               <ListItem button key='product'>
                 <ListItemIcon>
-                  <DashboardIcon style={{ color: textMenuWhite }} />
+                  <CreditCard style={{ color: textMenuWhite }} />
                 </ListItemIcon>
                 <ListItemText secondary={<Typography type="subtitle1" className={classes.textMenu}>finance</Typography>} />
               </ListItem>
