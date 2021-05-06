@@ -83,20 +83,20 @@ const Transaction = props => {
     setForm(<Create/>);
   }
 
-  const edit = (account, formSearch) => {
-    account.formSearch = formSearch;
+  const edit = (finance, formSearch) => {
+    finance.formSearch = formSearch;
     setModalState({
       open: true,
       title: 'Edit Finance',
       maxWidth: 'sm'
     });
 
-    setForm(<Update account={account} page={page} closedModalDialog={() => closedModalDialog()}/>);
+    setForm(<Update finance={finance} page={page} closedModalDialog={() => closedModalDialog()}/>);
   }
 
-  const remove = (account, formSearch) => {
-    account.formSearch = formSearch
-    setRemoveData(account);
+  const remove = (finance, formSearch) => {
+    finance.formSearch = formSearch
+    setRemoveData(finance);
     setOpenDialog(true);
   }
 
@@ -264,7 +264,7 @@ const Transaction = props => {
           </Grid>
         </Grid>
       </>
-      <List formSearch={formSearch} edit={(account) => edit(account, formSearch)} remove={(account) => remove(account, formSearch)}/>
+      <List formSearch={formSearch} edit={(finance) => edit(finance, formSearch)} remove={(finance) => remove(finance, formSearch)}/>
 
       <Dialog
         open={openDialog}
