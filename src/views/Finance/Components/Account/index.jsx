@@ -22,6 +22,7 @@ import {AddCircle, Search} from "@material-ui/icons";
 import {makeStyles} from "@material-ui/core/styles";
 import {Modal} from '../../../../components/UI';
 import Paper from "@material-ui/core/Paper";
+import Show from "./Components/Show";
 
 const useStyles = makeStyles(theme => ({
   btnAdd: {
@@ -93,6 +94,15 @@ const Account = props => {
     });
 
     setForm(<Update account={account} page={page} closedModalDialog={() => closedModalDialog()}/>);
+  }
+
+  const show = (account) => {
+    setModalState({
+      open: true,
+      title: 'View Account',
+      maxWidth: 'sm'
+    });
+    setForm(<Show account={account}></Show>);
   }
 
   const remove = (account, formSearch) => {
@@ -237,7 +247,6 @@ const Account = props => {
                       // inputRef={register}
                     >
                       <option value="name">Name</option>
-                      <option value="type">Type</option>
                     </Select>
                     {/* <FormHelperText>{errorStatus.status && errorStatus.status[0]}</FormHelperText> */}
                   </FormControl>
@@ -266,7 +275,7 @@ const Account = props => {
           </Grid>
         </Grid>
       </>
-      <List formSearch={formSearch} edit={(account) => edit(account, formSearch)} remove={(account) => remove(account, formSearch)}/>
+      <List formSearch={formSearch} edit={(account) => edit(account, formSearch)} remove={(account) => remove(account, formSearch)} show={(account) => show(account)}/>
 
       <Dialog
         open={openDialog}

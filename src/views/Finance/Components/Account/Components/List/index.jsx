@@ -87,7 +87,7 @@ const List = props => {
             <TableBodyComponents
               account={account}
               key={account.id}
-              // detailed={() => props.show(asset)}
+              showed={() => props.show(account)}
               edited={() => props.edit(account)}
               deleted={() => props.remove(account)}
               // deleted={() => {
